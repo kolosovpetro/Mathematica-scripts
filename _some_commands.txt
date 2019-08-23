@@ -27,7 +27,7 @@ Column[Table[FullSimplify[n^t == n^KDelta[Mod[t, 2]] P[Floor[(t - 1)/2], n, 0, n
 
 Column[Table[Expand[P[m, t, a, b] == Sum[(-1)^(m - j) (-1)^m  Sum[H[m, j, k]* ((b + 1)^k - a^k), {k, 1, 2 m - j + 1}] t^j, {j, 0, m}]], {m, 0, 10}, {t, 0, 10}], Left]
 
-Column[Table[FullSimplify[Q[r, n, t, b] == Q[r, n, 0, b] - Q[r, n, 0, t - 1]], {r, 0, 10}, {n, 0, 7}], Left]
+Column[Table[FullSimplify[Q[r, n, a, b] == Q[r, n, 0, b] - Q[r, n, 0, a - 1]], {r, 0, 10}, {n, 0, 7}], Left]
 
 CONVOLUTION AND POWER SUM UNIT TESTS
 
