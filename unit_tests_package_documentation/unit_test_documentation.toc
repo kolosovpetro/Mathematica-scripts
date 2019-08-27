@@ -7,7 +7,7 @@
 \contentsline {section}{\tocsection {}{}{Unit test 6}}{2}{section*.8}
 \contentsline {section}{\tocsection {}{}{Unit test 7}}{2}{section*.9}
 \contentsline {section}{\tocsection {}{}{Unit test 8}}{2}{section*.10}
-\contentsline {section}{\tocsection {}{}{Unit test 9}}{2}{section*.11}
+\contentsline {section}{\tocsection {}{}{Unit test 9}}{3}{section*.11}
 \contentsline {section}{\tocsection {}{}{Unit test 10}}{3}{section*.12}
 \contentsline {section}{\tocsection {}{}{Unit test 11}}{3}{section*.13}
 \contentsline {section}{\tocsection {}{}{Unit test 12}}{3}{section*.14}
@@ -15,3 +15,5 @@
 \contentsline {section}{\tocsection {}{}{Unit test 14}}{3}{section*.16}
 \contentsline {section}{\tocsection {}{}{Unit test 15}}{3}{section*.17}
 \contentsline {section}{\tocsection {}{}{Unit test 16}}{3}{section*.18}
+\contentsline {section}{\tocsection {}{}{Unit test 17}}{4}{section*.19}
+\contentsline {section}{\tocsection {}{}{Unit test 18}}{4}{section*.20}

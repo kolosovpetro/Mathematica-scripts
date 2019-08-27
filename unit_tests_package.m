@@ -18,6 +18,8 @@ UnitTest13::usage= "Performes Unit test 13 from source https://github.com/Koloso
 UnitTest14::usage= "Performes Unit test 14 from source https://github.com/KolosovPetro/research_unit_tests"
 UnitTest15::usage= "Performes Unit test 15 from source https://github.com/KolosovPetro/research_unit_tests"
 UnitTest16::usage= "Performes Unit test 16 from source https://github.com/KolosovPetro/research_unit_tests"
+UnitTest17::usage= "Performes Unit test 17 from source https://github.com/KolosovPetro/research_unit_tests"
+UnitTest18::usage= "Performes Unit test 18 from source https://github.com/KolosovPetro/research_unit_tests"
 
 Begin["`Private`"]
 
@@ -39,6 +41,8 @@ UnitTest13 := Column[Table[FullSimplify[n^(2m+1) == P[m, n, 0, n]], {m, 0, 10}, 
 UnitTest14 := Column[Table[FullSimplify[n^t == n^(Boole[Mod[t, 2]== 0]) P[Floor[(t-1)/2], n, 0, n]], {t, 0, 10}, {n, 0, 10}], Left];
 UnitTest15 := Column[Table[FullSimplify[P[m,n,t,n-t+1] == Sum[CoeffA[m, r]*DiscreteConvf[r, t, n], {r, 0, m}]], {m,0, 2},{n, 0, 10}, {t, 0, 10}], Left];
 UnitTest16 := Column[Table[FullSimplify[1 == P[m, n, 0, n] - P[m, n, 1, n]], {m, 0, 10}, {n, 0, 10}], Left];
+UnitTest17 := Column[Table[P2[m, a+b, 0, a+b+1]-(a+b)^(Boole[Mod[m, 2]== 0]), {m, 0, 10}],Left];
+UnitTest18 := Column[Table[P2[m, a+b, 1, a+b]+(a+b)^(Boole[Mod[m, 2]== 0]), {m, 0, 10}],Left];
 
 End[ ]
 

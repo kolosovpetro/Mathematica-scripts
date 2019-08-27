@@ -65,7 +65,7 @@ pdfkeywords={Wolfram mathematica, Wolfram Language}
 \begin{document}
 
 \begin{abstract}
-This \verb".pdf" file represents a documentation for Unit Tests package in Wolfram Mathematica, which related to the math. research 
+This \verb".pdf" file represents a documentation for Unit Tests package in Wolfram Mathematica, which related to the math. research
 \href{https://arxiv.org/abs/1603.02468}{\textsf{https://arxiv.org/abs/1603.02468}}.
 \end{abstract}
 \maketitle
@@ -79,87 +79,100 @@ Prior the unit test execution, one has to download the packages \verb"main_defin
 \textsf{Needs["UnitTests`"]}
 \end{center}
 Read also \href{http://support.wolfram.com/kb/5648}{\textsf{http://support.wolfram.com/kb/5648}}.
+
+Each unit test is inside the package \verb"unit_tests_package.m", each unit test to be recalled by a single command without any inputs, for example, unit test 1 to be recalled by the command \verb"UnitTest1" to the Mathematica console. Any unit test conditions (iteration limits, etc) to be changed directly inside the package  \verb"unit_tests_package.m".
 \section*{Unit test 1}
-Verifies an identity
+Command \verb"UnitTest1" to Mathematica console verifies an identity
 \begin{equation*}
 \mathbf{P}^{m}_{a,b}(n) = \mathbf{P}^{m}_{b}(n)-\mathbf{P}^{m}_{a}(n)
 \end{equation*}
 \section*{Unit test 2}
-Verifies an identity
+Command \verb"UnitTest2" to Mathematica console verifies an identity
 \begin{equation*}
 \mathbf{P}^{m}_{a,b}(n) = \sum_{k}\mathbf{X}^{m}_{k}(a,b) (-1)^{m-k} n^k
 \end{equation*}
 \section*{Unit test 3}
-Verifies an identity
+Command \verb"UnitTest3" to Mathematica console verifies an identity
 \begin{equation*}
 \mathbf{X}^{m}_{k}(a,b)=\mathbf{X}^{m}_{k}(b) - \mathbf{X}^{m}_{k}(a)
 \end{equation*}
 \section*{Unit test 4}
-Verifies an identity
+Command \verb"UnitTest4" to Mathematica console verifies an identity
 \begin{equation*}
 \mathbf{X}^{m}_{t}(a,b) = (-1)^m \sum_{k=1}^{2 m - t + 1}\mathbf{H}_{m,t}(k) (b^k - a^k)
 \end{equation*}
 \section*{Unit test 5}
-Verifies an identity
+Command \verb"UnitTest5" to Mathematica console verifies an identity
 \begin{equation*}
 \mathbf{P}^{m}_{a,b}(n) = \sum_{k} (-1)^{2m-k} \sum_{\ell=1}^{2m-k+1} \mathbf{H}_{m,k}(\ell)(b^\ell - a^\ell)n^k
 \end{equation*}
 \section*{Unit test 6}
-Verifies an identity
+Command \verb"UnitTest6" to Mathematica console verifies an identity
 \begin{equation*}
 \mathbf{Q}^{r}_{a,b}(n) = \mathbf{Q}^{r}_{b}(n) - \mathbf{Q}^{r}_{a}(n)
 \end{equation*}
 \section*{Unit test 7}
-Verifies an identity
+Command \verb"UnitTest7" to Mathematica console verifies an identity
 \begin{equation*}
 (f_{t}^{r} \ast f_{t}^{r})[n]  = \mathbf{Q}_{t,n-t+1}^r(n), \quad n\geq 1.
 \end{equation*}
 \section*{Unit test 8}
-Verifies an identity
+Command \verb"UnitTest8" to Mathematica console verifies an identity
 \begin{equation*}
 n^{2m+1} + 1 = \sum_{r\geq 0} \mathbf{A}_{m,r} (f_{0}^{r} \ast f_{0}^{r})[n], \quad n>0, \quad n\in\mathbb{N}
 \end{equation*}
 \section*{Unit test 9}
-Verifies an identity
+Command \verb"UnitTest9" to Mathematica console verifies an identity
 \begin{equation*}
 n^{2m+1} - 1 = \sum_{r\geq 0} \mathbf{A}_{m,r} (f_{1}^{r} \ast f_{1}^{r})[n], \quad n>0, \quad n\in\mathbb{N}
 \end{equation*}
 \section*{Unit test 10}
-Verifies an identity
+Command \verb"UnitTest10" to Mathematica console verifies an identity
 \begin{equation*}
 \mathbf{X}^{m}_{t}(a,b) = (-1)^m \sum_{j=t}^m \mathbf{A}_{m,j} (-1)^j \binom{j}{t} (S_{2j-t} (b) - S_{2j-t} (a))
 \end{equation*}
 \section*{Unit test 11}
-Verifies an identity
+Command \verb"UnitTest11" to Mathematica console verifies an identity
 \begin{equation*}
 \mathbf{P}^{m}_{a,b}(n) = \sum_{k} \sum\limits_{j\geq k}(-1)^{2m+j-k} \mathbf{A}_{m,j} \binom{j}{k}(S_{2j-k}(b)-S_{2j-k}(a)) n^k
 \end{equation*}
 \section*{Unit test 12}
-Verifies an identity
+Command \verb"UnitTest12" to Mathematica console verifies an identity
 \begin{equation*}
 \mathbf{P}^{m}_{a+b}(a+b) \equiv \sum_{k} \binom{2m+1}{k} a^{2m+1-k} b^k
 \end{equation*}
 \section*{Unit test 13}
-Verifies an identity
+Command \verb"UnitTest13" to Mathematica console verifies an identity
 \begin{equation*}
 n^{2m+1} = \mathbf{P}^{m}_{n}(n)
 \end{equation*}
 \section*{Unit test 14}
-Verifies an identity
+Command \verb"UnitTest14" to Mathematica console verifies an identity
 \begin{equation*}
 n^s
 = n^{[s \ \mathrm{is} \ \mathrm{even}]} \mathbf{P}^{\lfloor \tfrac{s-1}{2} \rfloor}_{n}(n)
 \end{equation*}
 \section*{Unit test 15}
-Verifies an identity
+Command \verb"UnitTest15" to Mathematica console verifies an identity
 \begin{equation*}
 \mathbf{P}^{m}_{t,n-t+1}(n)
 =\sum\limits_{r}\mathbf{A}_{m,r} \mathbf{Q}_{t,n-t+1}^r(n)
 \equiv \sum\limits_{r}\mathbf{A}_{m,r} (f_{t}^{r} \ast f_{t}^{r})[n], \quad n\geq 1.
 \end{equation*}
 \section*{Unit test 16}
-Verifies an identity
+Command \verb"UnitTest16" to Mathematica console verifies an identity
 \begin{equation*}
 \mathbf{P}^{m}_{n}(n) - \mathbf{P}^{m}_{1,n+1}(n) = 1
+\end{equation*}
+\section*{Unit test 17}
+Command \verb"UnitTest16" to Mathematica console verifies an identity
+\begin{equation*}
+\begin{split}
+(a+b)^s
+&=\sum_{k} \binom{s}{k} a^{s-k} b^k \\
+&\equiv(a+b)^{[s \ \mathrm{is} \ \mathrm{even}]} \left(-1 + \mathbf{P}^{\lfloor \tfrac{s-1}{2} \rfloor}_{a+b+1}(a+b)\right) \\
+&=(a+b)^{[s \ \mathrm{is} \ \mathrm{even}]} \left(-1 + \sum_{k}^{ \ }\mathbf{A}_{\lfloor \tfrac{s-1}{2} \rfloor, k}\mathbf{Q}^{k}_{a+b+1}(a+b)\right) \\
+&=(a+b)^{[s \ \mathrm{is} \ \mathrm{even}]} \left(-1 + \sum_{k}^{ \ }\mathbf{A}_{\lfloor \tfrac{s-1}{2} \rfloor, k}(f^{r}_{0} \ast f^{r}_{0})[a+b]\right), \quad s\geq 1, \quad a+b\geq 1.
+\end{split}
 \end{equation*}
 \end{document}

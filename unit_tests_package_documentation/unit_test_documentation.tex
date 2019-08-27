@@ -65,7 +65,7 @@ pdfkeywords={Wolfram mathematica, Wolfram Language}
 \begin{document}
 
 \begin{abstract}
-This \verb".pdf" file represents a documentation for Unit Tests package in Wolfram Mathematica, which related to the math. research 
+This \verb".pdf" file represents a documentation for Unit Tests package in Wolfram Mathematica, which related to the math. research
 \href{https://arxiv.org/abs/1603.02468}{\textsf{https://arxiv.org/abs/1603.02468}}.
 \end{abstract}
 \maketitle
@@ -82,12 +82,12 @@ Read also \href{http://support.wolfram.com/kb/5648}{\textsf{http://support.wolfr
 
 Each unit test is inside the package \verb"unit_tests_package.m", each unit test to be recalled by a single command without any inputs, for example, unit test 1 to be recalled by the command \verb"UnitTest1" to the Mathematica console. Any unit test conditions (iteration limits, etc) to be changed directly inside the package  \verb"unit_tests_package.m".
 \section*{Unit test 1}
-Command \verb"UnitTest1" to Mathematica console verifies an identity 
+Command \verb"UnitTest1" to Mathematica console verifies an identity
 \begin{equation*}
 \mathbf{P}^{m}_{a,b}(n) = \mathbf{P}^{m}_{b}(n)-\mathbf{P}^{m}_{a}(n)
 \end{equation*}
 \section*{Unit test 2}
-Command \verb"UnitTest2" to Mathematica console verifies an identity 
+Command \verb"UnitTest2" to Mathematica console verifies an identity
 \begin{equation*}
 \mathbf{P}^{m}_{a,b}(n) = \sum_{k}\mathbf{X}^{m}_{k}(a,b) (-1)^{m-k} n^k
 \end{equation*}
@@ -163,5 +163,27 @@ Command \verb"UnitTest15" to Mathematica console verifies an identity
 Command \verb"UnitTest16" to Mathematica console verifies an identity
 \begin{equation*}
 \mathbf{P}^{m}_{n}(n) - \mathbf{P}^{m}_{1,n+1}(n) = 1
+\end{equation*}
+\section*{Unit test 17}
+Command \verb"UnitTest17" to Mathematica console verifies an identity
+\begin{equation*}
+\begin{split}
+(a+b)^s
+&=\sum_{k} \binom{s}{k} a^{s-k} b^k \\
+&\equiv(a+b)^{[s \ \mathrm{is} \ \mathrm{even}]} \left(-1 + \mathbf{P}^{\lfloor \tfrac{s-1}{2} \rfloor}_{a+b+1}(a+b)\right) \\
+&=(a+b)^{[s \ \mathrm{is} \ \mathrm{even}]} \left(-1 + \sum_{k}^{ \ }\mathbf{A}_{\lfloor \tfrac{s-1}{2} \rfloor, k}\mathbf{Q}^{k}_{a+b+1}(a+b)\right) \\
+&=(a+b)^{[s \ \mathrm{is} \ \mathrm{even}]} \left(-1 + \sum_{k}^{ \ }\mathbf{A}_{\lfloor \tfrac{s-1}{2} \rfloor, k}(f^{r}_{0} \ast f^{r}_{0})[a+b]\right), \quad s\geq 1, \quad a+b\geq 1.
+\end{split}
+\end{equation*}
+\section*{Unit test 18}
+Command \verb"UnitTest18" to Mathematica console verifies an identity
+\begin{equation*}
+\begin{split}
+(a+b)^s
+&=\sum_{k} \binom{s}{k} a^{s-k} b^k
+\equiv(a+b)^{[s \ \mathrm{is} \ \mathrm{even}]} \left(1 + \mathbf{P}^{\lfloor \tfrac{s-1}{2} \rfloor}_{1,a+b}(a+b)\right) \\
+&=(a+b)^{[s \ \mathrm{is} \ \mathrm{even}]} \left(1 + \sum_{k}^{ \ }\mathbf{A}_{\lfloor \tfrac{s-1}{2} \rfloor, k}\mathbf{Q}^{k}_{1,a+b}(a+b)\right) \\
+&=(a+b)^{[s \ \mathrm{is} \ \mathrm{even}]} \left(1 + \sum_{k}^{ \ }\mathbf{A}_{\lfloor \tfrac{s-1}{2} \rfloor, k}(f^{r}_{1} \ast f^{r}_{1})[a+b]\right), \quad s\geq 1, \quad a+b\geq 1.
+\end{split}
 \end{equation*}
 \end{document}

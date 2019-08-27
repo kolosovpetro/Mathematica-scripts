@@ -11,6 +11,7 @@ L::usage= "L[m, n, k] gives polynomial L."
 X::usage= "X[m_, t_, a_, b_] gives coefficient X."
 H::usage= "H[m_, t_, k_] gives coefficient H."
 P::usage= "P[m_, n_, a_, b_] gives the polynomial P."
+P2::usage= "P2 = Indicator * P."
 s::usage= "s[n_, k_] gives the coefficient s."
 S::usage= "S gives an ordinary power sum."
 
@@ -35,6 +36,7 @@ L[m_, n_, k_] := Sum[CoeffA[m, r] * s[n,k]^r, {r, 0, m}];
 X[m_, t_, a_, b_] := Expand[(-1)^(m) Sum[Sum[Binomial[j, t] CoeffA[m, j] k^(2 j - t) (-1)^j, {j, t, m}], {k, a, b-1}]];
 H[m_, t_, k_] := Sum[Binomial[j, t] * CoeffA[m, j] * (-1)^j / (2 j - t + 1) * Binomial[2 j - t + 1, k]*BernoulliB[2 j - t + 1 - k], {j, t, m}];
 P[m_, n_, a_, b_] := Expand[Sum[L[m, n, k], {k, a, b-1}]];
+P2[m_, n_, a_, b_] := Expand[n^(Boole[Mod[m, 2]== 0])* P[Floor[(m-1)/2], n, a, b]];
 
 End[ ]
 
