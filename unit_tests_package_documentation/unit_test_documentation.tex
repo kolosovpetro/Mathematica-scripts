@@ -168,11 +168,7 @@ Command \verb"UnitTest16" to Mathematica console verifies an identity
 Command \verb"UnitTest17" to Mathematica console verifies an identity
 \begin{equation*}
 \begin{split}
-(a+b)^s
-&=\sum_{k} \binom{s}{k} a^{s-k} b^k \\
-&\equiv(a+b)^{[s \ \mathrm{is} \ \mathrm{even}]} \left(-1 + \mathbf{P}^{\lfloor \tfrac{s-1}{2} \rfloor}_{a+b+1}(a+b)\right) \\
-&=(a+b)^{[s \ \mathrm{is} \ \mathrm{even}]} \left(-1 + \sum_{k}^{ \ }\mathbf{A}_{\lfloor \tfrac{s-1}{2} \rfloor, k}\mathbf{Q}^{k}_{a+b+1}(a+b)\right) \\
-&=(a+b)^{[s \ \mathrm{is} \ \mathrm{even}]} \left(-1 + \sum_{k}^{ \ }\mathbf{A}_{\lfloor \tfrac{s-1}{2} \rfloor, k}(f^{r}_{0} \ast f^{r}_{0})[a+b]\right), \quad s\geq 1, \quad a+b\geq 1.
+(a+b)^s =\sum_{k} \binom{s}{k} a^{s-k} b^k \equiv(a+b)^{[s \ \mathrm{is} \ \mathrm{even}]} \left(-1 + \mathbf{P}^{\lfloor \tfrac{s-1}{2} \rfloor}_{a+b+1}(a+b)\right)
 \end{split}
 \end{equation*}
 \section*{Unit test 18}
@@ -180,10 +176,26 @@ Command \verb"UnitTest18" to Mathematica console verifies an identity
 \begin{equation*}
 \begin{split}
 (a+b)^s
-&=\sum_{k} \binom{s}{k} a^{s-k} b^k
-\equiv(a+b)^{[s \ \mathrm{is} \ \mathrm{even}]} \left(1 + \mathbf{P}^{\lfloor \tfrac{s-1}{2} \rfloor}_{1,a+b}(a+b)\right) \\
-&=(a+b)^{[s \ \mathrm{is} \ \mathrm{even}]} \left(1 + \sum_{k}^{ \ }\mathbf{A}_{\lfloor \tfrac{s-1}{2} \rfloor, k}\mathbf{Q}^{k}_{1,a+b}(a+b)\right) \\
-&=(a+b)^{[s \ \mathrm{is} \ \mathrm{even}]} \left(1 + \sum_{k}^{ \ }\mathbf{A}_{\lfloor \tfrac{s-1}{2} \rfloor, k}(f^{r}_{1} \ast f^{r}_{1})[a+b]\right), \quad s\geq 1, \quad a+b\geq 1.
+=\sum_{k} \binom{s}{k} a^{s-k} b^k
+\equiv(a+b)^{[s \ \mathrm{is} \ \mathrm{even}]} \left(1 + \mathbf{P}^{\lfloor \tfrac{s-1}{2} \rfloor}_{1,a+b}(a+b)\right)
+\end{split}
+\end{equation*}
+\section*{Unit test 19}
+Command \verb"UnitTest19[a+b]" to Mathematica console verifies an identity
+\begin{equation*}
+\begin{split}
+(a+b)^s
+&=\sum_{k} \binom{s}{k} a^{s-k} b^k \\
+&=(a+b)^{[s \ \mathrm{is} \ \mathrm{even}]} \left(-1 + \sum_{k}^{ \ }\mathbf{A}_{\lfloor \tfrac{s-1}{2} \rfloor, k}(f^{r}_{0} \ast f^{r}_{0})[a+b]\right), \quad s\geq 1, \quad a+b\geq 1.
+\end{split}
+\end{equation*}
+\section*{Unit test 20}
+Command \verb"UnitTest20[a+b]" to Mathematica console verifies an identity
+\begin{equation*}
+\begin{split}
+(a+b)^s 
+&=\sum_{k} \binom{s}{k} a^{s-k} b^k \\
+&=(a+b)^{[s \ \mathrm{is} \ \mathrm{even}]} \left(1 + \sum_{k}^{ \ }\mathbf{A}_{\lfloor \tfrac{s-1}{2} \rfloor, k}(f^{r}_{1} \ast f^{r}_{1})[a+b]\right), \quad s\geq 1, \quad a+b\geq 2.
 \end{split}
 \end{equation*}
 \end{document}

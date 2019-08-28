@@ -165,7 +165,29 @@ Command \verb"UnitTest16" to Mathematica console verifies an identity
 \mathbf{P}^{m}_{n}(n) - \mathbf{P}^{m}_{1,n+1}(n) = 1
 \end{equation*}
 \section*{Unit test 17}
-Command \verb"UnitTest16" to Mathematica console verifies an identity
+Command \verb"UnitTest17" to Mathematica console verifies an identity
+\begin{equation*}
+\begin{split}
+(a+b)^s
+&=\sum_{k} \binom{s}{k} a^{s-k} b^k \\
+&\equiv(a+b)^{[s \ \mathrm{is} \ \mathrm{even}]} \left(-1 + \mathbf{P}^{\lfloor \tfrac{s-1}{2} \rfloor}_{a+b+1}(a+b)\right) \\
+&=(a+b)^{[s \ \mathrm{is} \ \mathrm{even}]} \left(-1 + \sum_{k}^{ \ }\mathbf{A}_{\lfloor \tfrac{s-1}{2} \rfloor, k}\mathbf{Q}^{k}_{a+b+1}(a+b)\right) \\
+&=(a+b)^{[s \ \mathrm{is} \ \mathrm{even}]} \left(-1 + \sum_{k}^{ \ }\mathbf{A}_{\lfloor \tfrac{s-1}{2} \rfloor, k}(f^{r}_{0} \ast f^{r}_{0})[a+b]\right), \quad s\geq 1, \quad a+b\geq 1.
+\end{split}
+\end{equation*}
+\section*{Unit test 18}
+Command \verb"UnitTest18" to Mathematica console verifies an identity
+\begin{equation*}
+\begin{split}
+(a+b)^s
+&=\sum_{k} \binom{s}{k} a^{s-k} b^k
+\equiv(a+b)^{[s \ \mathrm{is} \ \mathrm{even}]} \left(1 + \mathbf{P}^{\lfloor \tfrac{s-1}{2} \rfloor}_{1,a+b}(a+b)\right) \\
+&=(a+b)^{[s \ \mathrm{is} \ \mathrm{even}]} \left(1 + \sum_{k}^{ \ }\mathbf{A}_{\lfloor \tfrac{s-1}{2} \rfloor, k}\mathbf{Q}^{k}_{1,a+b}(a+b)\right) \\
+&=(a+b)^{[s \ \mathrm{is} \ \mathrm{even}]} \left(1 + \sum_{k}^{ \ }\mathbf{A}_{\lfloor \tfrac{s-1}{2} \rfloor, k}(f^{r}_{1} \ast f^{r}_{1})[a+b]\right), \quad s\geq 1, \quad a+b\geq 1.
+\end{split}
+\end{equation*}
+\section*{Unit test 19}
+Command \verb"UnitTest19[n]" to Mathematica console verifies an identity
 \begin{equation*}
 \begin{split}
 (a+b)^s

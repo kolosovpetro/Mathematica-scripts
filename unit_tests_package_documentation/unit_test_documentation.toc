@@ -17,3 +17,5 @@
 \contentsline {section}{\tocsection {}{}{Unit test 16}}{3}{section*.18}
 \contentsline {section}{\tocsection {}{}{Unit test 17}}{4}{section*.19}
 \contentsline {section}{\tocsection {}{}{Unit test 18}}{4}{section*.20}
+\contentsline {section}{\tocsection {}{}{Unit test 19}}{4}{section*.21}
+\contentsline {section}{\tocsection {}{}{Unit test 20}}{4}{section*.22}
