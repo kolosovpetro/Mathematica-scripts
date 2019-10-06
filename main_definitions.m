@@ -14,6 +14,8 @@ P::usage= "P[m_, n_, a_, b_] gives the polynomial P."
 P2::usage= "P2 = Indicator * P."
 s::usage= "s[n_, k_] gives the coefficient s."
 S::usage= "S gives an ordinary power sum."
+DiscConvTable::usage= "DiscConvTable gives a discrete self-convolution of power n for n>=0."
+MatrixPolynomialL::usage= "MatrixPolynomialL gives a MxN matrix of values of polynomial L."
 
 Begin["`Private`"]
 
@@ -21,7 +23,7 @@ Unprotect[Power];
 Power[0|0., 0|0.] = 1;
 Protect[Power];
 
-f[r_, t_, n_] := n^r Boole[n >= t];
+f[r_, t_, n_] := n^r Boole[n >= -t];
 S[p_, n_]:= Sum[k^p, {k, 0, n-1}];
 DiscreteConvf[r_, t_, n_]:= Sum[f[r, t, n-k] * f[r, t, k],{k, -Infinity, +Infinity}];
 ContinuousConvf[r_, t_, n_]:= Integrate[f[r, t, n-k] * f[r, t, k], {k, -Infinity, +Infinity}];
@@ -37,6 +39,8 @@ X[m_, t_, a_, b_] := Expand[(-1)^(m) Sum[Sum[Binomial[j, t] CoeffA[m, j] k^(2 j 
 H[m_, t_, k_] := Sum[Binomial[j, t] * CoeffA[m, j] * (-1)^j / (2 j - t + 1) * Binomial[2 j - t + 1, k]*BernoulliB[2 j - t + 1 - k], {j, t, m}];
 P[m_, n_, a_, b_] := Expand[Sum[L[m, n, k], {k, a, b-1}]];
 P2[m_, n_, a_, b_] := Expand[n^(Boole[Mod[m, 2]== 0])* P[Floor[(m-1)/2], n, a, b]];
+DiscConvTable[m_] := Column[Table[DiscreteConvf[k, 0, n-k],{n, 0, m},{k, 0, n}], Left];
+MatrixPolynomialL[m_, M_, N_] := Column[Table[L[m, n, k], {n, -N, N}, {k, -M, M}], Left];
 
 End[ ]
 
