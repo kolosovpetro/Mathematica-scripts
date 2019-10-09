@@ -20,8 +20,9 @@ UnitTest15::usage= "Performes Unit test 15 from source https://github.com/Koloso
 UnitTest16::usage= "Performes Unit test 16 from source https://github.com/KolosovPetro/research_unit_tests"
 UnitTest17::usage= "Performes Unit test 17 from source https://github.com/KolosovPetro/research_unit_tests"
 UnitTest18::usage= "Performes Unit test 18 from source https://github.com/KolosovPetro/research_unit_tests"
-UnitTest19::usage= "Performes Unit test 18 from source https://github.com/KolosovPetro/research_unit_tests"
-UnitTest20::usage= "Performes Unit test 18 from source https://github.com/KolosovPetro/research_unit_tests"
+UnitTest19::usage= "Performes Unit test 19 from source https://github.com/KolosovPetro/research_unit_tests"
+UnitTest20::usage= "Performes Unit test 20 from source https://github.com/KolosovPetro/research_unit_tests"
+UnitTest21::usage= "Performes Unit test 21 from source https://github.com/KolosovPetro/research_unit_tests"
 
 Begin["`Private`"]
 
@@ -47,6 +48,7 @@ UnitTest17 := Column[Table[P2[m, a+b, 0, a+b+1]-(a+b)^(Boole[Mod[m, 2]== 0]), {m
 UnitTest18 := Column[Table[P2[m, a+b, 1, a+b]+(a+b)^(Boole[Mod[m, 2]== 0]), {m, 0, 10}],Left];
 UnitTest19[n_] := Column[Table[FullSimplify[Refine[Sum[CoeffA[m, r]*DiscreteConvf[r, 0, n], {r, 0, m}], Element[n, Integers]], Assumptions-> n>=1], {m, 0, 5}], Left];
 UnitTest20[n_] := Column[Table[FullSimplify[Refine[Sum[CoeffA[m, r]*DiscreteConvf[r, 1, n], {r, 0, m}], Element[n, Integers]], Assumptions-> n>=2], {m, 0, 5}], Left];
+UnitTest21 := Column[Table[FullSimplify[n^(2m+1)+1 == Sum[CoeffA[m,r]*MacaulayDiscConv[r,0,n], {r,0,m}]], {n,0,10}, {m,0,5}], Left];
 
 End[ ]
 

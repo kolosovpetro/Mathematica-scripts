@@ -9,6 +9,7 @@
 \usepackage{mathrsfs}
 \usepackage{colonequals}
 \usepackage{natbib}
+\usepackage{xparse}
 
 \hypersetup{
 pdftitle={Unit test package documentation},
@@ -17,6 +18,18 @@ pdfauthor={Petro Kolosov},
 pdfkeywords={Wolfram mathematica, Wolfram Language}
 }
 
+\newcommand \power [2]{\langle #1 \rangle^{#2}}
+\newcommand \iverson[1][s]{[#1 \ \mathrm{is} \ \mathrm{even}]}
+\newcommand \floor [1]{\lfloor #1 \rfloor}
+\newcommand \coeffA [3][A]{\mathbf{#1}_{{#2},{#3}}}
+\newcommand \coeffH [4][H]{\mathbf{#1}_{{#2},{#3}}(#4)}
+\newcommand \coeffX [4][X]{\mathbf{#1}_{{#2},{#3}}(#4)}
+\newcommand \commonPowSum [3][S]{\mathbf{#1}_{#2}(#3)}
+\NewDocumentCommand \mynotation { O{P} E{^_}{mb} D(){n} }{\mathbf{#1}^{#2}_{#3}(#4)}
+\NewDocumentCommand \convSum { O{C} E{^_}{rn} D(){b} }{\mathbf{#1}^{#2}_{#3}(#4)}
+%%\NewDocumentCommand \coeffH { O{H} E{_}{r} D(){k}}{\mathbf{#1}_{#2}(#3)}
+%%\NewDocumentCommand \coeffX { O{X} E{_}{r} D(){b}}{\mathbf{#1}_{#2}(#3)}
+\NewDocumentCommand \polynomL { O{L} E{_}{m} D(){n,k}}{\mathbf{#1}_{#2}(#3)}
 
 \newtheorem{thm}{Theorem}[section]
 \newtheorem{cor}[thm]{Corollary}
@@ -193,9 +206,17 @@ Command \verb"UnitTest19[a+b]" to Mathematica console verifies an identity
 Command \verb"UnitTest20[a+b]" to Mathematica console verifies an identity
 \begin{equation*}
 \begin{split}
-(a+b)^s 
+(a+b)^s
 &=\sum_{k} \binom{s}{k} a^{s-k} b^k \\
 &=(a+b)^{[s \ \mathrm{is} \ \mathrm{even}]} \left(1 + \sum_{k}^{ \ }\mathbf{A}_{\lfloor \tfrac{s-1}{2} \rfloor, k}(f^{r}_{1} \ast f^{r}_{1})[a+b]\right), \quad s\geq 1, \quad a+b\geq 2.
 \end{split}
+\end{equation*}
+\section*{Unit test 21}
+Command \verb"UnitTest21" to Mathematica console verifies an identity
+\begin{equation*}
+\label{polynomials_p_and_convolution}
+\mynotation_{n+1}(n)
+=\sum_{r=0}^{m} \coeffA{m}{r} \convSum_{n+1}^{r}(n)
+\equiv \sum_{r=0}^{m} \coeffA{m}{r} \power{n}{r} \ast \power{n}{r} = n^{2m+1}+1
 \end{equation*}
 \end{document}
