@@ -2,16 +2,17 @@
 
 BeginPackage["MainDefinitions`"]
 
-PiecewisePow::usage= "PiecewisePow[r_, t_, n_] is power function defined for f=n^r, defined for n >= t, otherwise is 0. "
-PiecewisePowDiscConv::usage= "Gives discrete convolution of funtion f[r, t, n]. "
+f::usage= "f[r_, t_, n_] is power function defined for f=n^r, defined for n >= t, otherwise is 0. "
+DiscreteConvf::usage= "Gives discrete convolution of funtion f[r, t, n]. "
 ContinuousConvf::usage= "Gives cont. convolution of funtion f[r, t, n]. "
 CoeffA::usage= "CoeffA[n,k] produces the k-th coefficient A in n-th row."
-ConvolveSum::usage= "ConvolveSum gives convolution-like sum of power."
+Q::usage= "Q gives convolution-like sum of power."
 L::usage= "L[m, n, k] gives polynomial L."
 X::usage= "X[m_, t_, a_, b_] gives coefficient X."
 H::usage= "H[m_, t_, k_] gives coefficient H."
 P::usage= "P[m_, n_, a_, b_] gives the polynomial P."
 P2::usage= "P2 = Indicator * P."
+s::usage= "s[n_, k_] gives the coefficient s."
 S::usage= "S gives an ordinary power sum."
 DiscConvTable::usage= "DiscConvTable gives a discrete self-convolution of power n for n>=0."
 MatrixPolynomialL::usage= "MatrixPolynomialL gives a MxN matrix of values of polynomial L."
@@ -25,27 +26,27 @@ Unprotect[Power];
 Power[0|0., 0|0.] = 1;
 Protect[Power];
 
+f[r_, t_, n_] := n^r Boole[n >= t];
+MacaulayPow[r_, t_, n_] := Piecewise[{{(n-t)^r, n>=t}, {0, True}}];
+
+DiscreteConvf[r_, t_, n_]:= Sum[f[r, t, n-k] * f[r, t, k], {k, -Infinity, +Infinity}];
+MacaulayDiscConv[r_, t_, n_]:= Sum[MacaulayPow[r, t, n-k] * MacaulayPow[r, t, k], {k, -Infinity, +Infinity}];
+ContinuousConvf[r_, t_, n_]:= Integrate[f[r, t, n-k] * f[r, t, k], {k, -Infinity, +Infinity}];
+
 CoeffA[n_, k_] := 0;
 CoeffA[n_, k_] := (2 k + 1) * Binomial[2 k, k] * Sum[CoeffA[n, j] * Binomial[j, 2 k + 1]*(-1)^(j - 1)/(j - k) * BernoulliB[2 j - 2 k], {j, 2 k + 1, n}] /; 0 <= k < n;
 CoeffA[n_, k_] := (2 n + 1) * Binomial[2 n, n] /; k == n;
 
-L[m_, n_, k_] := Sum[CoeffA[m, r] * k^r(n-k)^r, {r, 0, m}];
-P[m_, n_, b_] := Expand[Sum[L[m, n, k], {k, 0, b-1}]];
-H[m_, t_, b_] := Sum[Binomial[j, t] * CoeffA[m, j] * (-1)^j / (2 j - t + 1) * Binomial[2 j - t + 1, b]*BernoulliB[2 j - t + 1 - b], {j, t, m}];
-X[m_, t_, j_] := Expand[(-1)^m Sum[H[m, t, k] j^k, {k, 1, 2m-t+1}]];
+s[n_, k_] := k(n-k);
+Q[r_, n_, a_, b_] := Sum[s[n,k]^r, {k, a, b-1}];
+L[m_, n_, k_] := Sum[CoeffA[m, r] * s[n, k]^r, {r, 0, m}];
+X[m_, t_, a_, b_] := Expand[(-1)^m Sum[Sum[Binomial[j, t] CoeffA[m, j] k^(2 j - t) (-1)^j, {j, t, m}], {k, a, b-1}]];
+H[m_, t_, k_] := Sum[Binomial[j, t] * CoeffA[m, j] * (-1)^j / (2 j - t + 1) * Binomial[2 j - t + 1, k]*BernoulliB[2 j - t + 1 - k], {j, t, m}];
+P[m_, n_, a_, b_] := Expand[Sum[L[m, n, k], {k, a, b-1}]];
 S[p_, n_]:= Sum[k^p, {k, 0, n-1}];
-ConvolveSum[n_, r_, b_] := Sum[k^r (n-k)^r, {k, 0, b-1}];
-PiecewisePow[x_, n_, a_] := x^n Boole[x >= a];
-MacaulayPow[x_, n_, a_] := Piecewise[{{(x-a)^n, x>=a}, {0, True}}];
-
-PiecewisePowDiscConv[x_, n_, a_]:= Sum[PiecewisePow[k, n, a] * PiecewisePow[x-k, n, a], {k, -Infinity, +Infinity}];
-MacaulayDiscConv[x_, n_, a_]:= Sum[MacaulayPow[k, n, a] * MacaulayPow[x-k, n, a], {k, -Infinity, +Infinity}];
-ContinuousConvf[x_, n_, a_]:= Integrate[PiecewisePow[k, n, a] * PiecewisePow[x-k, n, a], {k, -Infinity, +Infinity}];
-
-P2[m_, n_, b_] := Expand[n^(Boole[Mod[m, 2]== 0])* P[Floor[(m - 1)/2], n, b]];
-
-DiscConvTable[m_] := Column[Table[PiecewisePowDiscConv[n-k, k, 0],{n, 0, m},{k, 0, n}], Left];
-MacaulayDiscConvTable[m_] := Column[Table[MacaulayDiscConv[n-k, k, 0],{n, 0, m},{k, 0, n}], Left];
+P2[m_, n_, a_, b_] := Expand[n^(Boole[Mod[m, 2]== 0])* P[Floor[(m - 1)/2], n, a, b]];
+DiscConvTable[m_] := Column[Table[DiscreteConvf[k, r, n-k],{n, r, m},{k, r, n}], Left];
+MacaulayDiscConvTable[m_] := Column[Table[MacaulayDiscConv[k, r, n-k],{n, r, m},{k, r, n}], Left];
 MatrixPolynomialL[m_, M_, N_] := Column[Table[L[m, n, k], {n, -N, N}, {k, -M, M}], Left];
 
 End[ ]

@@ -1,0 +1,152 @@
+\documentclass[12pt, letterpaper]{amsart}
+\usepackage[left=1in,right=1in,bottom=1in,top=1in]{geometry}
+\usepackage{amsfonts}
+\usepackage{amsmath, amssymb}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage[pdfpagelabels,hyperindex,colorlinks=true,linkcolor=blue,urlcolor=magenta,citecolor=green]{hyperref}
+\usepackage{amsthm}
+\usepackage{float}
+\usepackage{mathrsfs}
+\usepackage{colonequals}
+\usepackage{xparse}
+
+\newenvironment{myitemize}
+{ \begin{itemize}
+    \setlength{\itemsep}{4pt}
+    \setlength{\parskip}{4pt}
+    \setlength{\parsep}{4pt}     }
+{ \end{itemize}                  }
+
+\newcommand \power [2]{\langle #1 \rangle^{#2}}
+\newcommand \iverson[1][s]{[#1 \ \mathrm{is} \ \mathrm{even}]}
+\newcommand \floor [1]{\lfloor #1 \rfloor}
+\newcommand \coeffA [3][coeffA]{\texttt{#1}[{\texttt{#2}},{\texttt{#3}}]}
+\newcommand \coeffH [4][H]{\texttt{#1}[{\texttt{#2}},{\texttt{#3}},{\texttt{#4}}]}
+\newcommand \MacaulayPow [4][MacaulayPow]{\texttt{#1}[{\texttt{#2}},{\texttt{#3}},{\texttt{#4}}]}
+\newcommand \PiecewisePow [4][PiecewisePow]{\texttt{#1}[{\texttt{#2}},{\texttt{#3}},{\texttt{#4}}]}
+\newcommand \ConvolveSum [4][ConvolveSum]{\texttt{{#1}} [{\texttt{#2}},{\texttt{#3}},{\texttt{#4}}]}
+\newcommand \polL [4][L]{\texttt{{#1}} [{\texttt{#2}},{\texttt{#3}},{\texttt{#4}}]}
+\newcommand \polP [4][P]{\texttt{{#1}} [{\texttt{#2}},{\texttt{#3}},{\texttt{#4}}]}
+\newcommand \coeffX [4][X]{\texttt{#1}[{\texttt{#2}},{\texttt{#3}},{\texttt{#4}}]}
+\newcommand \commonPowSum [3][S]{\texttt{#1}[{\texttt{#2}},{\texttt{#3}}]}
+\NewDocumentCommand \mynotation { O{P} E{^_}{mb} D(){n} }{\mathbf{#1}^{#2}_{#3}(#4)}
+\NewDocumentCommand \convSum { O{C} E{^_}{rn} D(){b} }{\mathbf{#1}^{#2}_{#3}(#4)}
+%%\NewDocumentCommand \coeffH { O{H} E{_}{r} D(){k}}{\mathbf{#1}_{#2}(#3)}
+%%\NewDocumentCommand \coeffX { O{X} E{_}{r} D(){b}}{\mathbf{#1}_{#2}(#3)}
+\NewDocumentCommand \polynomL { O{L} E{_}{m} D(){n,k}}{\mathbf{#1}_{#2}(#3)}
+
+
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{quest}[thm]{Question}
+\newtheorem{ppty}[thm]{Property}
+\newtheorem{ppties}[thm]{Properties}
+\newtheorem{claim}[thm]{Claim}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{defns}[thm]{Definitions}
+\newtheorem{con}[thm]{Construction}
+\newtheorem{exmp}[thm]{Example}
+\newtheorem{exmps}[thm]{Examples}
+\newtheorem{notn}[thm]{Notation}
+\newtheorem{notns}[thm]{Notations}
+\newtheorem{addm}[thm]{Addendum}
+\newtheorem{exer}[thm]{Exercise}
+\newtheorem{limit}[thm]{Limitation}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{rems}[thm]{Remarks}
+\newtheorem{warn}[thm]{Warning}
+\newtheorem{sch}[thm]{Scholium}
+
+\makeatletter
+\let\c@equation\c@thm
+\raggedbottom
+\makeatother
+\numberwithin{equation}{section}
+%--------Meta Data: Fill in your info------
+\title[main\_definitions.m package documentation]
+{\texttt{main\_definitions.m} package documentation}
+\email{kolosovp94@gmail.com}
+\keywords{Binomial theorem, Convolution, Polynomials, Power function, Multinomial theorem, Binomial coefficient, Multinomial coefficient}
+\urladdr{https://kolosovpetro.github.io}
+\subjclass[2010]{44A35 (primary), 11C08 (secondary)}
+\date{\today}
+\hypersetup{
+pdftitle={main_definitions.m package documentation},
+pdfsubject={Discrete Mathematics, Number Theory, Combinatorics},
+pdfauthor={Petro Kolosov},
+pdfkeywords={Binomial theorem, Convolution transform, Power function, Polynomials, Multinomial theorem, Binomial Coefficient, Bernoulli number, Discrete convolution, Pascal's triangle, Faulhaber's Formula, Power Sum, Worpitzky Identity}
+}
+\usepackage{microtype}
+\begin{document}
+\maketitle
+\tableofcontents
+\section{Introduction}
+This file represents a documentation for \texttt{main\_definitions.m} Mathematica package. To get started proceed to GitHub repository \href{https://github.com/KolosovPetro/research_unit_tests}{\textsf{https://github.com/kolosovpetro/research\_unit\_tests}}, fork it, and find the package \texttt{main\_definitions.m}. This package doesn't have any dependencies on other Mathematica packages. To get started simply install it to your Mathematica by clicking \verb"File -> Install...", click \verb"Source" and choose corresponding file in dropped menu. Then recall the package \verb"main_definitions.m" in Mathematica notebook using the command
+
+\begin{center}
+\textsf{Needs["MainDefinitions`"]}
+\end{center}
+
+Read also \href{http://support.wolfram.com/kb/5648}{\textsf{http://support.wolfram.com/kb/5648}}.
+
+\section{Functions inside the package \texttt{main\_definitions.m}}
+\begin{myitemize}
+\item $\coeffA{m}{r}$ returns a real coefficient as
+\begin{equation*}
+\coeffA{m}{r} \colonequals
+\begin{cases}
+(2r+1)\binom{2r}{r}, & \mathrm{if } \ r=m \\
+(2r+1)\binom{2r}{r} \sum_{d=2r+1}^{m} \coeffA{m}{d} \binom{d}{2r+1} \frac{(-1)^{d-1}}{d-r} B_{2d-2r}, & \mathrm{if } \ 0 \leq r < m \\
+0, & \mathrm{if } \ r<0 \ \mathrm{or } \ r>m
+\end{cases}
+\end{equation*}
+\item $\polL{m}{n}{k}$ returns the  polynomial of degree $2m$
+\begin{equation*}
+\polL{m}{n}{k} \colonequals \sum_{r=0}^{m} \coeffA{m}{r} k^r(n-k)^r
+\end{equation*}
+\item $\polP{m}{n}{b}$ returns the polynomial of degree $2m+1$
+\begin{equation*}
+\label{p_definition}
+\polP{m}{n}{b} \colonequals \sum_{k=0}^{b-1} \polL{m}{n}{k}
+\end{equation*}
+\item $\coeffH{m}{t}{b}$ returns a real coefficient defined as
+\begin{equation*}
+\coeffH{m}{t}{b} \colonequals \sum_{j=t}^{m} \binom{j}{t} \coeffA{m}{j} \frac{(-1)^j}{2j-t+1} \binom{2j-t+1}{b} B_{2j-t+1-b}
+\end{equation*}
+\item $\coeffX{m}{t}{j}$ returns the polynomial of degree $2m-t$
+\begin{equation*}
+\coeffX{m}{t}{j} \colonequals (-1)^m \sum_{k=1}^{2m-t+1} \coeffH{m}{t}{k} \cdot j^k
+\end{equation*}
+\item \commonPowSum{p}{n} returns a common power sum
+\begin{equation*}
+\commonPowSum{p}{n} \colonequals \sum_{k=0}^{n-1} k^p
+\end{equation*}
+
+\item \MacaulayPow{x}{n}{a} returns the powered Macaulay bracket
+\begin{equation*}
+\MacaulayPow{x}{n}{a}=\power{x-a}{n} \colonequals
+\begin{cases}
+(x-a)^n, &\quad x\geq a \\
+0, &\quad \mathrm{otherwise}.
+\end{cases}
+\end{equation*}
+\item \PiecewisePow{x}{n}{a} gives a piecewise defined power function, involving \texttt{Boole}
+\begin{equation*}
+\PiecewisePow{x}{n}{a} \colonequals x^n\texttt{Boole}[x\geq a]
+\end{equation*}
+\item $\ConvolveSum{n}{r}{b}$ returns a convolutional power sum
+\begin{equation*}
+\label{q_definition}
+\ConvolveSum{n}{r}{b} \colonequals \sum_{k=0}^{b-1} k^r(n-k)^r
+\end{equation*}
+\end{myitemize}
+
+\end{document}
