@@ -15,7 +15,8 @@ P2::usage= "P2 = Indicator * P."
 S::usage= "S gives an ordinary power sum."
 DiscConvTable::usage= "DiscConvTable gives a discrete self-convolution of power n for n>=0."
 MatrixPolynomialL::usage= "MatrixPolynomialL gives a MxN matrix of values of polynomial L."
-MacaulayPow::usage= "gives a Macaulay condiditons of <x-a>^n."
+MacaulayPow::usage= "gives a Macaulay condiditons of x>=a."
+MacaulayPowStrict::usage= "gives a Macaulay condiditons of x>a."
 MacaulayDiscConv::usage= "gives a discrete convolution of MacaulayPow."
 MacaulayDiscConvTable::usage= "gives a table consisting of discrete convolution of MacaulayPow."
 
@@ -37,6 +38,7 @@ S[p_, n_]:= Sum[k^p, {k, 0, n-1}];
 ConvolveSum[n_, r_, b_] := Sum[k^r (n-k)^r, {k, 0, b-1}];
 PiecewisePow[x_, n_, a_] := x^n Boole[x >= a];
 MacaulayPow[x_, n_, a_] := Piecewise[{{(x-a)^n, x>=a}, {0, True}}];
+MacaulayPowStrict[x_, n_, a_] := Piecewise[{{(x-a)^n, x>=a}, {0, True}}];
 
 PiecewisePowDiscConv[x_, n_, a_]:= Sum[PiecewisePow[k, n, a] * PiecewisePow[x-k, n, a], {k, -Infinity, +Infinity}];
 MacaulayDiscConv[x_, n_, a_]:= Sum[MacaulayPow[k, n, a] * MacaulayPow[x-k, n, a], {k, -Infinity, +Infinity}];

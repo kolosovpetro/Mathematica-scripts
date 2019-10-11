@@ -18,11 +18,13 @@
 { \end{itemize}                  }
 
 \newcommand \power [2]{\langle #1 \rangle^{#2}}
+\newcommand \curvepower [2]{\{ #1 \}^{#2}}
 \newcommand \iverson[1][s]{[#1 \ \mathrm{is} \ \mathrm{even}]}
 \newcommand \floor [1]{\lfloor #1 \rfloor}
 \newcommand \coeffA [3][coeffA]{\texttt{#1}[{\texttt{#2}},{\texttt{#3}}]}
 \newcommand \coeffH [4][H]{\texttt{#1}[{\texttt{#2}},{\texttt{#3}},{\texttt{#4}}]}
 \newcommand \MacaulayPow [4][MacaulayPow]{\texttt{#1}[{\texttt{#2}},{\texttt{#3}},{\texttt{#4}}]}
+\newcommand \MacaulayPowStrict [4][MacaulayPowStrict]{\texttt{#1}[{\texttt{#2}},{\texttt{#3}},{\texttt{#4}}]}
 \newcommand \PiecewisePow [4][PiecewisePow]{\texttt{#1}[{\texttt{#2}},{\texttt{#3}},{\texttt{#4}}]}
 \newcommand \ConvolveSum [4][ConvolveSum]{\texttt{{#1}} [{\texttt{#2}},{\texttt{#3}},{\texttt{#4}}]}
 \newcommand \polL [4][L]{\texttt{{#1}} [{\texttt{#2}},{\texttt{#3}},{\texttt{#4}}]}
@@ -135,6 +137,14 @@ Read also \href{http://support.wolfram.com/kb/5648}{\textsf{http://support.wolfr
 \MacaulayPow{x}{n}{a}=\power{x-a}{n} \colonequals
 \begin{cases}
 (x-a)^n, &\quad x\geq a \\
+0, &\quad \mathrm{otherwise}.
+\end{cases}
+\end{equation*}
+\item $\MacaulayPowStrict{x}{n}{a}$ returns the powered Macaulay bracket
+\begin{equation*}
+\MacaulayPowStrict{x}{n}{a} = \curvepower{x-a}{n} \colonequals
+\begin{cases}
+(x-a)^n, &\quad x>a \\
 0, &\quad \mathrm{otherwise}.
 \end{cases}
 \end{equation*}
