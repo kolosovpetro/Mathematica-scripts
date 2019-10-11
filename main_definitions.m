@@ -19,6 +19,7 @@ MacaulayPow::usage= "gives a Macaulay condiditons of x>=a."
 MacaulayPowStrict::usage= "gives a Macaulay condiditons of x>a."
 MacaulayDiscConv::usage= "gives a discrete convolution of MacaulayPow."
 MacaulayDiscConvTable::usage= "gives a table consisting of discrete convolution of MacaulayPow."
+GeneralP::usage= "gives the generalized polynomial P."
 
 Begin["`Private`"]
 
@@ -45,6 +46,7 @@ MacaulayDiscConv[x_, n_, a_]:= Sum[MacaulayPow[k, n, a] * MacaulayPow[x-k, n, a]
 ContinuousConvf[x_, n_, a_]:= Integrate[PiecewisePow[k, n, a] * PiecewisePow[x-k, n, a], {k, -Infinity, +Infinity}];
 
 P2[m_, n_, b_] := Expand[n^(Boole[Mod[m, 2]== 0])* P[Floor[(m - 1)/2], n, b]];
+GeneralP[m_, n_, a_, b_] := Expand[Sum[L[m, n, k], {k, a, b-1}]];
 
 DiscConvTable[m_] := Column[Table[PiecewisePowDiscConv[n-k, k, 0],{n, 0, m},{k, 0, n}], Left];
 MacaulayDiscConvTable[m_] := Column[Table[MacaulayDiscConv[n-k, k, 0],{n, 0, m},{k, 0, n}], Left];
