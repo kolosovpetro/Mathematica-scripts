@@ -131,7 +131,18 @@ Read also \href{http://support.wolfram.com/kb/5648}{\textsf{http://support.wolfr
 \begin{equation*}
 \commonPowSum{p}{n} \colonequals \sum_{k=0}^{n-1} k^p
 \end{equation*}
-
+\begin{equation*}
+\begin{split}
+\mynotationFixed{m}{b}{n}
+&=\sum_{k=0}^{b-1} \polynomL
+ =\sum_{k=0}^{b-1} \sum_{r=0}^{m} \coeffA{m}{r} k^r(n-k)^r
+ =\sum_{r=0}^{m} \coeffA{m}{r} \sum_{k=0}^{b-1} k^r(n-k)^r
+ =\sum_{r=0}^{m} \coeffA{m}{r} \convSumFixed{r}{n}{b} \\
+&=\sum_{r=0}^{m} \coeffA{m}{r} \sum_{k=0}^{b-1} k^r \sum_{j=0}^{r} (-1)^j \binom{r}{j} n^{r-j} k^j
+ =\sum_{r=0}^{m} \sum_{j=0}^{r} (-1)^j n^{r-j} \binom{r}{j} \coeffA{m}{r} \sum_{k=0}^{b-1} k^{r+j} \\
+&= \sum_{r=0}^{m} \sum_{j=0}^{r} n^{r-j} \binom{r}{j} \coeffA{m}{r} \frac{(-1)^j}{r+j+1} \sum_{s=0}^{r+j} \binom{r+j+1}{s} B_s (b-1)^{r+j-s+1}
+\end{split}
+\end{equation*}
 \item \MacaulayPow{x}{n}{a} returns the powered Macaulay bracket
 \begin{equation*}
 \MacaulayPow{x}{n}{a}=\power{x-a}{n} \colonequals
