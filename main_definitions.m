@@ -42,7 +42,7 @@ CoeffA[n_, k_] := (2k + 1) * Binomial[2k, k] * Sum[CoeffA[n, j] * Binomial[j, 2k
 CoeffA[n_, k_] := (2n + 1) * Binomial[2n, n] /; k == n;
 
 L[m_, n_, k_] := Sum[CoeffA[m, r] * k^r * (n - k)^r, {r, 0, m}];
-P[m_, n_, b_] := Expand[Sum[L[m, n, k], {k, 0, b - 1}]];
+P[m_, n_, b_] := Sum[L[m, n, k], {k, 0, b - 1}];
 H[m_, t_, b_] := Sum[Binomial[j, t] * CoeffA[m, j] * (-1)^j / (2j - t + 1) * Binomial[2j - t + 1, b] * BernoulliB[2j - t + 1 - b], {j, t, m}];
 X[m_, t_, j_] := Sum[(-1)^m * H[m, t, k] * j^k, {k, 1, 2m - t + 1}];
 S[p_, n_]:= Sum[k^p, {k, 0, n-1}];

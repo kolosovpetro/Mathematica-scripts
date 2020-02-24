@@ -1,10 +1,10 @@
-# research_unit_tests
+arXiv1603.02468 Mathematica Implementations
+===========================================
 Wolfram Mathematica scripts for verification of the results of the manuscript https://arxiv.org/abs/1603.02468.
 
-This repository is organised the following way. There are 2 Wolfram Mathematica packages inside, these packages depends on each other. Package _unit_tests_package.m_ depends on _main_definitions.m_. 
+To get started pull current GitHub repository https://github.com/KolosovPetro/arXiv1603.02468-Mathematica-Implementations. Findout the Mathemaatica package *main_definitions.m*. This package doesn't have any dependencies on other Mathematica packages. To get started simply install it to your Mathematica by clicking *File -> Install...*, click *Source* and choose corresponding file in dropped menu. Then recall the package *main_definitions.m* in Mathematica notebook using the command:
 
-Documentation for the _unit_tests_package.m_ package is placed at https://github.com/KolosovPetro/research_unit_tests/tree/master/unit_test_documentation, among with other files there is a .pdf which describes each unit test and fromula it proves.
+	Needs["MainDefinitions`"]
 
-A package _main_definitions.m_ contains an implementations of definitions from the section "Notations and conventions" from https://arxiv.org/abs/1603.02468
-
-The file _unit_tests_exec.nb_ is a Mathematica Notebook which gives an example of recall of unit tests from  the package _unit_tests_package.m_.
+Example of a Mathematica notebook where *main_definitions.m* recalled is available in github repository as well.
+Read also http://support.wolfram.com/kb/5648.

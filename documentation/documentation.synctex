@@ -1,79 +1,76 @@
 SyncTeX Version:1
 Input:1:G:\MATH\1 UNIT TESTS (GIT)\documentation\documentation.tex
-Input:2:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amscls\amsart.cls
-Input:3:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
-Input:4:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amstext.sty
-Input:5:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
-Input:6:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty
-Input:7:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
-Input:8:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd
-Input:9:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty
-Input:10:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.sty
-Input:11:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.sty
-Input:12:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\generic\iftex\ifpdf.sty
-Input:13:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\generic\iftex\iftex.sty
-Input:14:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\generic\iftex\ifvtex.sty
-Input:15:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\generic\iftex\ifxetex.sty
-Input:16:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.cfg
-Input:17:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty
-Input:18:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption.sty
-Input:19:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption3.sty
-Input:20:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty
-Input:21:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty
-Input:22:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pdftexcmds\pdftexcmds.sty
-Input:23:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\generic\infwarerr\infwarerr.sty
-Input:24:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty
-Input:25:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty
-Input:26:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\generic\iftex\ifluatex.sty
-Input:27:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty
-Input:28:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\pdfescape.sty
-Input:29:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\hycolor.sty
-Input:30:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\xcolor-patch.sty
-Input:31:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\hopatch.sty
-Input:32:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\letltxmacro\letltxmacro.sty
-Input:33:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty
-Input:34:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\kvoptions\kvoptions.sty
-Input:35:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def
-Input:36:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\intcalc.sty
-Input:37:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg
-Input:38:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\url\url.sty
-Input:39:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\bitset.sty
-Input:40:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\bigintcalc.sty
-Input:41:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\generic\atbegshi\atbegshi.sty
-Input:42:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def
-Input:43:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\atveryend\atveryend.sty
-Input:44:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\rerunfilecheck\rerunfilecheck.sty
-Input:45:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\uniquecounter.sty
-Input:46:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\float\float.sty
-Input:47:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\jknappen\mathrsfs.sty
-Input:48:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\colonequals.sty
-Input:49:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\microtype\microtype.sty
-Input:50:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\microtype\microtype-pdftex.def
-Input:51:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\microtype\microtype.cfg
-Input:52:G:\MATH\1 UNIT TESTS (GIT)\documentation\documentation.aux
-Input:53:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd
-Input:54:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd
-Input:55:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\jknappen\ursfs.fd
-Input:56:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\color.sty
-Input:57:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg
-Input:58:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def
-Input:59:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
-Input:60:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.sty
-Input:61:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\refcount.sty
-Input:62:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty
-Input:63:G:\MATH\1 UNIT TESTS (GIT)\documentation\documentation.out
-Input:64:G:\MATH\1 UNIT TESTS (GIT)\documentation\documentation.out
-Input:65:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\microtype\mt-cmr.cfg
-Input:66:G:\MATH\1 UNIT TESTS (GIT)\documentation\documentation.toc
-Input:67:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\microtype\mt-msa.cfg
-Input:68:C:\Users\RAZUMOVSKY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\microtype\mt-msb.cfg
+Input:2:C:\MikTeX\tex\latex\amscls\amsart.cls
+Input:3:C:\MikTeX\tex\latex\amsmath\amsmath.sty
+Input:4:C:\MikTeX\tex\latex\amsmath\amstext.sty
+Input:5:C:\MikTeX\tex\latex\amsmath\amsgen.sty
+Input:6:C:\MikTeX\tex\latex\amsmath\amsbsy.sty
+Input:7:C:\MikTeX\tex\latex\amsmath\amsopn.sty
+Input:8:C:\MikTeX\tex\latex\amsfonts\umsa.fd
+Input:9:C:\MikTeX\tex\latex\amsfonts\amsfonts.sty
+Input:10:C:\MikTeX\tex\latex\geometry\geometry.sty
+Input:11:C:\MikTeX\tex\latex\graphics\keyval.sty
+Input:12:C:\MikTeX\tex\generic\iftex\ifvtex.sty
+Input:13:C:\MikTeX\tex\generic\iftex\iftex.sty
+Input:14:C:\MikTeX\tex\latex\geometry\geometry.cfg
+Input:15:C:\MikTeX\tex\latex\amsfonts\amssymb.sty
+Input:16:C:\MikTeX\tex\latex\caption\caption.sty
+Input:17:C:\MikTeX\tex\latex\caption\caption3.sty
+Input:18:C:\MikTeX\tex\latex\hyperref\hyperref.sty
+Input:19:C:\MikTeX\tex\generic\ltxcmds\ltxcmds.sty
+Input:20:C:\MikTeX\tex\latex\pdftexcmds\pdftexcmds.sty
+Input:21:C:\MikTeX\tex\generic\infwarerr\infwarerr.sty
+Input:22:C:\MikTeX\tex\generic\kvsetkeys\kvsetkeys.sty
+Input:23:C:\MikTeX\tex\generic\kvdefinekeys\kvdefinekeys.sty
+Input:24:C:\MikTeX\tex\generic\pdfescape\pdfescape.sty
+Input:25:C:\MikTeX\tex\latex\hycolor\hycolor.sty
+Input:26:C:\MikTeX\tex\latex\hycolor\xcolor-patch.sty
+Input:27:C:\MikTeX\tex\latex\oberdiek\hopatch.sty
+Input:28:C:\MikTeX\tex\latex\letltxmacro\letltxmacro.sty
+Input:29:C:\MikTeX\tex\latex\auxhook\auxhook.sty
+Input:30:C:\MikTeX\tex\latex\kvoptions\kvoptions.sty
+Input:31:C:\MikTeX\tex\latex\hyperref\pd1enc.def
+Input:32:C:\MikTeX\tex\generic\intcalc\intcalc.sty
+Input:33:C:\MikTeX\tex\generic\etexcmds\etexcmds.sty
+Input:34:C:\MikTeX\tex\latex\00miktex\hyperref.cfg
+Input:35:C:\MikTeX\tex\latex\url\url.sty
+Input:36:C:\MikTeX\tex\generic\bitset\bitset.sty
+Input:37:C:\MikTeX\tex\generic\bigintcalc\bigintcalc.sty
+Input:38:C:\MikTeX\tex\generic\atbegshi\atbegshi.sty
+Input:39:C:\MikTeX\tex\latex\hyperref\hpdftex.def
+Input:40:C:\MikTeX\tex\latex\atveryend\atveryend.sty
+Input:41:C:\MikTeX\tex\latex\rerunfilecheck\rerunfilecheck.sty
+Input:42:C:\MikTeX\tex\generic\uniquecounter\uniquecounter.sty
+Input:43:C:\MikTeX\tex\latex\float\float.sty
+Input:44:C:\MikTeX\tex\latex\jknappen\mathrsfs.sty
+Input:45:C:\MikTeX\tex\latex\oberdiek\colonequals.sty
+Input:46:C:\MikTeX\tex\latex\microtype\microtype.sty
+Input:47:C:\MikTeX\tex\latex\microtype\microtype-pdftex.def
+Input:48:C:\MikTeX\tex\latex\microtype\microtype.cfg
+Input:49:G:\MATH\1 UNIT TESTS (GIT)\documentation\documentation.aux
+Input:50:C:\MikTeX\tex\latex\amsfonts\umsa.fd
+Input:51:C:\MikTeX\tex\latex\amsfonts\umsb.fd
+Input:52:C:\MikTeX\tex\latex\jknappen\ursfs.fd
+Input:53:C:\MikTeX\tex\latex\graphics\color.sty
+Input:54:C:\MikTeX\tex\latex\graphics-cfg\color.cfg
+Input:55:C:\MikTeX\tex\latex\graphics-def\pdftex.def
+Input:56:C:\MikTeX\tex\context\base\mkii\supp-pdf.mkii
+Input:57:C:\MikTeX\tex\latex\hyperref\nameref.sty
+Input:58:C:\MikTeX\tex\latex\refcount\refcount.sty
+Input:59:C:\MikTeX\tex\generic\gettitlestring\gettitlestring.sty
+Input:60:G:\MATH\1 UNIT TESTS (GIT)\documentation\documentation.out
+Input:61:G:\MATH\1 UNIT TESTS (GIT)\documentation\documentation.out
+Input:62:C:\MikTeX\tex\latex\microtype\mt-cmr.cfg
+Input:63:G:\MATH\1 UNIT TESTS (GIT)\documentation\documentation.toc
+Input:64:C:\MikTeX\tex\latex\microtype\mt-msa.cfg
+Input:65:C:\MikTeX\tex\latex\microtype\mt-msb.cfg
 Output:pdf
 Magnification:1000
 Unit:1
 X Offset:0
 Y Offset:0
 Content:
-!6411
+!3505
 {1
 [1,115:4736286,48149299:30785865,43413013,0
 h1,115:4736286,4736286:0,0,0
@@ -134,68 +131,68 @@ x1,78:22034776,10795088
 g1,78:22034776,10795088
 k1,78:35522151,10795088:13487375
 )
-(66,1:4736286,12171344:30785865,546132,0
-g66,1:6891678,12171344
-h66,1:6891678,12171344:0,0,0
-g66,1:5522718,12171344
-x66,1:6121638,12171344
-g66,1:6891678,12171344
-x66,1:7597275,12171344
-x66,1:8559825,12171344
-x66,1:11105235,12171344
-k66,1:34367087,12171344:23261852
-(66,1:34367087,12171344:1232068,506811,0
-k66,1:35214135,12171344:847048
-x66,1:35599155,12171344
+(63,1:4736286,12171344:30785865,546132,0
+g63,1:6891678,12171344
+h63,1:6891678,12171344:0,0,0
+g63,1:5522718,12171344
+x63,1:6121638,12171344
+g63,1:6891678,12171344
+x63,1:7597275,12171344
+x63,1:8559825,12171344
+x63,1:11105235,12171344
+k63,1:34367087,12171344:23261852
+(63,1:34367087,12171344:1232068,506811,0
+k63,1:35214135,12171344:847048
+x63,1:35599155,12171344
 )
-g66,1:34290083,12171344
-g66,1:35522151,12171344
+g63,1:34290083,12171344
+g63,1:35522151,12171344
 )
-(66,2:4736286,13088848:30785865,546132,152916
-g66,2:6891678,13088848
-h66,2:6891678,13088848:0,0,0
-g66,2:5522718,13088848
-x66,2:6121638,13088848
-g66,2:6891678,13088848
-x66,2:7394207,13088848
-x66,2:10157795,13088848
-g66,2:10414475,13088848
-x66,2:11056175,13088848
-g66,2:11312855,13088848
-x66,2:12467915,13088848
-x66,2:12852935,13088848
-x66,2:13922435,13088848
-g66,2:14179115,13088848
-x66,2:15797855,13088848
-[66,2:15846415,13088848:242813,26214,0
+(63,2:4736286,13088848:30785865,546132,152916
+g63,2:6891678,13088848
+h63,2:6891678,13088848:0,0,0
+g63,2:5522718,13088848
+x63,2:6121638,13088848
+g63,2:6891678,13088848
+x63,2:7394207,13088848
+x63,2:10157795,13088848
+g63,2:10414475,13088848
+x63,2:11056175,13088848
+g63,2:11312855,13088848
+x63,2:12467915,13088848
+x63,2:12852935,13088848
+x63,2:13922435,13088848
+g63,2:14179115,13088848
+x63,2:15797855,13088848
+[63,2:15846415,13088848:242813,26214,0
 ]
-x66,2:21350133,13088848
-k66,2:34367087,13088848:13016954
-(66,2:34367087,13088848:1232068,506811,0
-k66,2:35214135,13088848:847048
-x66,2:35599155,13088848
+x63,2:21350133,13088848
+k63,2:34367087,13088848:13016954
+(63,2:34367087,13088848:1232068,506811,0
+k63,2:35214135,13088848:847048
+x63,2:35599155,13088848
 )
-g66,2:34290083,13088848
-g66,2:35522151,13088848
+g63,2:34290083,13088848
+g63,2:35522151,13088848
 )
-(66,3:4736286,14006352:30785865,546132,152916
-g66,3:6891678,14006352
-h66,3:6891678,14006352:0,0,0
-g66,3:5522718,14006352
-x66,3:6121638,14006352
-g66,3:6891678,14006352
-x66,3:10136405,14006352
-g66,3:10393085,14006352
-x66,3:11013395,14006352
-g66,3:11270075,14006352
-x66,3:12818711,14006352
-k66,3:34309335,14006352:21490624
-(66,3:34309335,14006352:1232068,506811,0
-k66,3:35156383,14006352:847048
-x66,3:35541403,14006352
+(63,3:4736286,14006352:30785865,546132,152916
+g63,3:6891678,14006352
+h63,3:6891678,14006352:0,0,0
+g63,3:5522718,14006352
+x63,3:6121638,14006352
+g63,3:6891678,14006352
+x63,3:10136405,14006352
+g63,3:10393085,14006352
+x63,3:11013395,14006352
+g63,3:11270075,14006352
+x63,3:12818711,14006352
+k63,3:34309335,14006352:21490624
+(63,3:34309335,14006352:1232068,506811,0
+k63,3:35156383,14006352:847048
+x63,3:35541403,14006352
 )
-g66,3:34290084,14006352
-g66,3:35522152,14006352
+g63,3:34290084,14006352
+g63,3:35522152,14006352
 )
 (1,79:4736286,17021008:30785865,537394,0
 k1,79:16964704,17021008:12228418
@@ -2050,7 +2047,7 @@ h1,152:4736286,48149299:30785865,0,0
 ]
 !23137
 }2
-Input:69:G:\MATH\1 UNIT TESTS (GIT)\documentation\documentation.aux
+Input:66:G:\MATH\1 UNIT TESTS (GIT)\documentation\documentation.aux
 !78
 Postamble:
 Count:1410
