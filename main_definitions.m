@@ -7,7 +7,7 @@ PiecewisePowDiscConv::usage= "Gives discrete convolution of funtion f[r, t, n]. 
 ContinuousConvf::usage= "Gives cont. convolution of funtion f[r, t, n]. "
 CoeffA::usage= "CoeffA[n,k] produces the k-th coefficient A in n-th row."
 ConvolveSum::usage= "ConvolveSum gives convolution-like sum of power."
-L::usage= "L[m, n, k] gives polynomial L."
+L::usage= "L[m, n, k] gives polynomial L. L[m, n, k] gives an integer value of polynomial L with repsect to m, n, k. For m=1 see triangle https://oeis.org/A287326."
 X::usage= "X[m_, t_, a_, b_] gives coefficient X."
 H::usage= "H[m_, t_, k_] gives coefficient H."
 P::usage= "P[m_, n_, a_, b_] gives the polynomial P."

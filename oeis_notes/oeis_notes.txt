@@ -1,0 +1,15 @@
+A287326 add refs: A000027, A000567, A051866, A051872, A255185 as column partial sums;
+				Commands: 
+				ColumnSumTriangleL[1, 0, 20] - A000027;
+				ColumnSumTriangleL[1, 1, 20] - A000567;
+				ColumnSumTriangleL[1, 2, 20] - A051866;
+				ColumnSumTriangleL[1, 3, 20] - A051872;
+				ColumnSumTriangleL[1, 4, 20] - A255185;
+				
+A287326 add refs: A003154, A166873 as first centered column;
+				Commands: 
+				CenteredColumnTriangleL[1, 1, 20] - A003154;
+				CenteredColumnTriangleL[1, 3, 20] - A166873;
+
+
+
