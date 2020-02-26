@@ -1,4 +1,4 @@
-A287326 add refs: A000027, A000567, A051866, A051872, A255185 as column partial sums;
+A287326 refs: A000027, A000567, A051866, A051872, A255185 as column partial sums;
 				Commands: 
 				ColumnSumTriangleL[1, 0, 20] - A000027;
 				ColumnSumTriangleL[1, 1, 20] - A000567;
@@ -6,10 +6,32 @@ A287326 add refs: A000027, A000567, A051866, A051872, A255185 as column partial 
 				ColumnSumTriangleL[1, 3, 20] - A051872;
 				ColumnSumTriangleL[1, 4, 20] - A255185;
 				
-A287326 add refs: A003154, A166873 as first centered column;
+A287326 refs: A003154, A166873 as first centered column;
 				Commands: 
 				CenteredColumnTriangleL[1, 1, 20] - A003154;
 				CenteredColumnTriangleL[1, 3, 20] - A166873;
 
-
+Not in OEIS(Commands):
+						PolnomialPColumn[1, 2, 15] - NA
+						PolnomialPColumn[1, 3, 15] - NA
+						PolnomialPColumn[1, 4, 15] - NA
+						PolnomialPColumn[2, 2, 15] - NA
+						......
+						
+						n*6 + 2 - gonal numbers
+						ColumnSumTriangleL[1, 5, 10] - NA (32 gonal number)
+						ColumnSumTriangleL[1, 6, 10] - A282850
+						ColumnSumTriangleL[1, 7, 10] - NA (44 gonal number)
+						ColumnSumTriangleL[1, 8, 10] - A261343
+						ColumnSumTriangleL[1, 9, 10] - NA (56 gonal number)
+						....
+						
+						Column[Table[ColumnSumTriangleL[2, r, 10], {r, 0, 10}], Left] - Most columns, rows, diagonals are not in OEIS
+						value 2 in ColumnSumTriangleL may be changed
+						
+						Column[Table[ColumnSumTriangleL[r, 2, 10], {r, 0, 10}], Left] - Most columns, rows, diagonals are not in OEIS
+						
+						
+						
+			
 

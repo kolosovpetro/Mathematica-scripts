@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     37842,       1204]
-NotebookOptionsPosition[     34044,       1079]
-NotebookOutlinePosition[     34415,       1095]
-CellTagsIndexPosition[     34372,       1092]
+NotebookDataLength[     40969,       1289]
+NotebookOptionsPosition[     37020,       1158]
+NotebookOutlinePosition[     37391,       1174]
+CellTagsIndexPosition[     37348,       1171]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -800,100 +800,56 @@ Cell[BoxData[
    RowBox[{"Table", "[", 
     RowBox[{
      RowBox[{"X", "[", 
-      RowBox[{"3", ",", " ", "n", ",", " ", "j"}], "]"}], ",", " ", 
+      RowBox[{"1", ",", " ", "n", ",", " ", "j"}], "]"}], ",", " ", 
      RowBox[{"{", 
       RowBox[{"n", ",", " ", "0", ",", " ", "3"}], "}"}]}], "]"}], ",", " ", 
    "Left"}], "]"}]], "Input",
- CellChangeTimes->{{3.7914510761567907`*^9, 3.791451105898971*^9}}],
+ CellChangeTimes->{{3.7914510761567907`*^9, 3.791451105898971*^9}, {
+  3.7917142962420883`*^9, 3.7917142963670993`*^9}}],
 
 Cell[BoxData[
  TemplateBox[{
   "BernoulliB","intnm",
    "\"Non-negative machine-sized integer expected at position \
 \\!\\(\\*RowBox[{\\\"1\\\"}]\\) in \\!\\(\\*RowBox[{\\\"BernoulliB\\\", \\\"[\
-\\\", RowBox[{\\\"-\\\", \\\"1\\\"}], \\\"]\\\"}]\\).\"",2,147,54,
-   29437952526576391478,"Local"},
+\\\", RowBox[{\\\"-\\\", \\\"1\\\"}], \\\"]\\\"}]\\).\"",2,141,1,
+   29439904280779574316,"Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.791451107469019*^9}],
+ CellChangeTimes->{3.791451107469019*^9, 3.7917142994196663`*^9}],
 
 Cell[BoxData[
  TemplateBox[{
   "BernoulliB","intnm",
    "\"Non-negative machine-sized integer expected at position \
 \\!\\(\\*RowBox[{\\\"1\\\"}]\\) in \\!\\(\\*RowBox[{\\\"BernoulliB\\\", \\\"[\
-\\\", RowBox[{\\\"-\\\", \\\"2\\\"}], \\\"]\\\"}]\\).\"",2,147,55,
-   29437952526576391478,"Local"},
+\\\", RowBox[{\\\"-\\\", \\\"2\\\"}], \\\"]\\\"}]\\).\"",2,141,2,
+   29439904280779574316,"Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.7914511074910336`*^9}],
-
-Cell[BoxData[
- TemplateBox[{
-  "BernoulliB","intnm",
-   "\"Non-negative machine-sized integer expected at position \
-\\!\\(\\*RowBox[{\\\"1\\\"}]\\) in \\!\\(\\*RowBox[{\\\"BernoulliB\\\", \\\"[\
-\\\", RowBox[{\\\"-\\\", \\\"3\\\"}], \\\"]\\\"}]\\).\"",2,147,56,
-   29437952526576391478,"Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.7914511075160484`*^9}],
-
-Cell[BoxData[
- TemplateBox[{
-  "General","stop",
-   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"BernoulliB\\\", \
-\\\"::\\\", \\\"intnm\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
-during this calculation.\"",2,147,57,29437952526576391478,"Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.791451107541066*^9}],
+ CellChangeTimes->{3.791451107469019*^9, 3.7917142994665403`*^9}],
 
 Cell[BoxData[
  TagBox[GridBox[{
     {
      RowBox[{
-      RowBox[{"7", " ", 
-       SuperscriptBox["j", "2"]}], "-", 
-      RowBox[{"28", " ", 
-       SuperscriptBox["j", "3"]}], "+", 
-      RowBox[{"70", " ", 
-       SuperscriptBox["j", "5"]}], "-", 
-      RowBox[{"70", " ", 
-       SuperscriptBox["j", "6"]}], "+", 
-      RowBox[{"20", " ", 
-       SuperscriptBox["j", "7"]}]}]},
-    {
-     RowBox[{
-      RowBox[{"7", " ", "j"}], "-", 
-      RowBox[{"42", " ", 
+      RowBox[{
+       RowBox[{"-", "3"}], " ", 
        SuperscriptBox["j", "2"]}], "+", 
-      RowBox[{"175", " ", 
-       SuperscriptBox["j", "4"]}], "-", 
-      RowBox[{"210", " ", 
-       SuperscriptBox["j", "5"]}], "+", 
-      RowBox[{"70", " ", 
-       SuperscriptBox["j", "6"]}]}]},
+      RowBox[{"2", " ", 
+       SuperscriptBox["j", "3"]}]}]},
     {
      RowBox[{
       RowBox[{
-       RowBox[{"-", "14"}], " ", "j"}], "+", 
-      RowBox[{"140", " ", 
-       SuperscriptBox["j", "3"]}], "-", 
-      RowBox[{"210", " ", 
-       SuperscriptBox["j", "4"]}], "+", 
-      RowBox[{"84", " ", 
-       SuperscriptBox["j", "5"]}]}]},
-    {
-     RowBox[{
-      RowBox[{"35", " ", 
-       SuperscriptBox["j", "2"]}], "-", 
-      RowBox[{"70", " ", 
-       SuperscriptBox["j", "3"]}], "+", 
-      RowBox[{"35", " ", 
-       SuperscriptBox["j", "4"]}]}]}
+       RowBox[{"-", "3"}], " ", "j"}], "+", 
+      RowBox[{"3", " ", 
+       SuperscriptBox["j", "2"]}]}]},
+    {"0"},
+    {"0"}
    },
    DefaultBaseStyle->"Column",
    GridBoxAlignment->{"Columns" -> {{Left}}},
    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
   "Column"]], "Output",
- CellChangeTimes->{3.7914511075450664`*^9}]
+ CellChangeTimes->{3.7914511075450664`*^9, 3.7917142994665403`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1044,6 +1000,129 @@ Cell[BoxData[
   3.7914544258691235`*^9}]
 }, Open  ]],
 
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Column", "[", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"X", "[", 
+      RowBox[{"2", ",", " ", "n", ",", " ", "j"}], "]"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"n", ",", " ", "0", ",", " ", "10"}], "}"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"j", ",", " ", "0", ",", " ", "10"}], "}"}]}], "]"}], ",", " ", 
+   "Left"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7917142733313203`*^9, 3.7917142872070265`*^9}, 
+   3.7917143300582247`*^9, {3.7917143789922915`*^9, 3.791714459449505*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "BernoulliB","intnm",
+   "\"Non-negative machine-sized integer expected at position \
+\\!\\(\\*RowBox[{\\\"1\\\"}]\\) in \\!\\(\\*RowBox[{\\\"BernoulliB\\\", \\\"[\
+\\\", RowBox[{\\\"-\\\", \\\"1\\\"}], \\\"]\\\"}]\\).\"",2,146,16,
+   29439904280779574316,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.7917144068999605`*^9, 3.79171445985577*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "BernoulliB","intnm",
+   "\"Non-negative machine-sized integer expected at position \
+\\!\\(\\*RowBox[{\\\"1\\\"}]\\) in \\!\\(\\*RowBox[{\\\"BernoulliB\\\", \\\"[\
+\\\", RowBox[{\\\"-\\\", \\\"2\\\"}], \\\"]\\\"}]\\).\"",2,146,17,
+   29439904280779574316,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.7917144068999605`*^9, 3.7917144599026475`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "BernoulliB","intnm",
+   "\"Non-negative machine-sized integer expected at position \
+\\!\\(\\*RowBox[{\\\"1\\\"}]\\) in \\!\\(\\*RowBox[{\\\"BernoulliB\\\", \\\"[\
+\\\", RowBox[{\\\"-\\\", \\\"3\\\"}], \\\"]\\\"}]\\).\"",2,146,18,
+   29439904280779574316,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.7917144068999605`*^9, 3.791714459933899*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"BernoulliB\\\", \
+\\\"::\\\", \\\"intnm\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,146,19,29439904280779574316,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.7917144068999605`*^9, 3.791714459949526*^9}}],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "1", ",", "32", ",", "513", ",", "2944", ",", "10625", ",", 
+       "29376", ",", "68257", ",", "140288", ",", "263169", ",", "460000"}], 
+      "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "60", ",", "540", ",", "2160", ",", "6000", ",", 
+       "13500", ",", "26460", ",", "47040", ",", "77760", ",", "121500"}], 
+      "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "30", ",", "150", ",", "420", ",", "900", ",", 
+       "1650", ",", "2730", ",", "4200", ",", "6120", ",", "8550"}], "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+       "0", ",", "0", ",", "0", ",", "0"}], "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+       "0", ",", "0", ",", "0", ",", "0"}], "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+       "0", ",", "0", ",", "0", ",", "0"}], "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+       "0", ",", "0", ",", "0", ",", "0"}], "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+       "0", ",", "0", ",", "0", ",", "0"}], "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+       "0", ",", "0", ",", "0", ",", "0"}], "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+       "0", ",", "0", ",", "0", ",", "0"}], "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+       "0", ",", "0", ",", "0", ",", "0"}], "}"}]}
+   },
+   DefaultBaseStyle->"Column",
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Column"]], "Output",
+ CellChangeTimes->{{3.7917144069624653`*^9, 3.7917144599651513`*^9}}]
+}, Open  ]],
+
 Cell[BoxData[""], "Input",
  CellChangeTimes->{{3.791427137696345*^9, 3.7914271583569183`*^9}, 
    3.791427223327921*^9}],
@@ -1096,7 +1175,7 @@ CellTagsIndex->{}
 Notebook[{
 Cell[558, 20, 81, 1, 33, "Input"],
 Cell[CellGroupData[{
-Cell[664, 25, 393, 9, 55, "Input"],
+Cell[664, 25, 393, 9, 56, "Input"],
 Cell[1060, 36, 841, 24, 33, "Output"]
 }, Open  ]],
 Cell[1916, 63, 320, 7, 33, "Input"],
@@ -1132,12 +1211,12 @@ Cell[11336, 338, 346, 8, 33, "Output"]
 }, Open  ]],
 Cell[11697, 349, 322, 9, 33, "Input"],
 Cell[CellGroupData[{
-Cell[12044, 362, 995, 26, 55, "Input"],
+Cell[12044, 362, 995, 26, 56, "Input"],
 Cell[13042, 390, 620, 24, 136, "Output"]
 }, Open  ]],
 Cell[13677, 417, 324, 9, 33, "Input"],
 Cell[CellGroupData[{
-Cell[14026, 430, 1001, 26, 55, "Input"],
+Cell[14026, 430, 1001, 26, 56, "Input"],
 Cell[15030, 458, 749, 30, 136, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
@@ -1177,35 +1256,41 @@ Cell[23160, 738, 453, 12, 33, "Input"],
 Cell[23616, 752, 1158, 39, 164, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[24811, 796, 376, 10, 33, "Input"],
-Cell[25190, 808, 379, 8, 23, "Message"],
-Cell[25572, 818, 381, 8, 23, "Message"],
-Cell[25956, 828, 381, 8, 23, "Message"],
-Cell[26340, 838, 345, 7, 23, "Message"],
-Cell[26688, 847, 1431, 48, 96, "Output"]
+Cell[24811, 796, 429, 11, 33, "Input"],
+Cell[25243, 809, 402, 8, 23, "Message"],
+Cell[25648, 819, 402, 8, 23, "Message"],
+Cell[26053, 829, 618, 22, 92, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[28156, 900, 211, 5, 33, "Input"],
-Cell[28370, 907, 503, 15, 36, "Output"]
+Cell[26708, 856, 211, 5, 33, "Input"],
+Cell[26922, 863, 503, 15, 36, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[28910, 927, 1004, 23, 33, "Input"],
-Cell[29917, 952, 1894, 54, 58, "Output"]
+Cell[27462, 883, 1004, 23, 33, "Input"],
+Cell[28469, 908, 1894, 54, 58, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[31848, 1011, 768, 21, 33, "Input"],
-Cell[32619, 1034, 339, 9, 33, "Output"]
+Cell[30400, 967, 768, 21, 33, "Input"],
+Cell[31171, 990, 339, 9, 33, "Output"]
 }, Open  ]],
-Cell[32973, 1046, 120, 2, 33, "Input"],
-Cell[33096, 1050, 70, 1, 33, "Input"],
-Cell[33169, 1053, 94, 1, 33, InheritFromParent],
-Cell[33266, 1056, 96, 1, 33, InheritFromParent],
-Cell[33365, 1059, 94, 1, 33, "Input"],
-Cell[33462, 1062, 94, 1, 33, InheritFromParent],
-Cell[33559, 1065, 166, 2, 33, "Input"],
-Cell[33728, 1069, 121, 2, 33, InheritFromParent],
-Cell[33852, 1073, 94, 1, 33, InheritFromParent],
-Cell[33949, 1076, 91, 1, 33, "Input"]
+Cell[CellGroupData[{
+Cell[31547, 1004, 544, 13, 33, "Input"],
+Cell[32094, 1019, 404, 8, 23, "Message"],
+Cell[32501, 1029, 407, 8, 23, "Message"],
+Cell[32911, 1039, 405, 8, 23, "Message"],
+Cell[33319, 1049, 371, 7, 23, "Message"],
+Cell[33693, 1058, 2241, 64, 254, "Output"]
+}, Open  ]],
+Cell[35949, 1125, 120, 2, 33, "Input"],
+Cell[36072, 1129, 70, 1, 33, "Input"],
+Cell[36145, 1132, 94, 1, 33, "Input"],
+Cell[36242, 1135, 96, 1, 33, "Input"],
+Cell[36341, 1138, 94, 1, 33, "Input"],
+Cell[36438, 1141, 94, 1, 33, "Input"],
+Cell[36535, 1144, 166, 2, 33, "Input"],
+Cell[36704, 1148, 121, 2, 33, "Input"],
+Cell[36828, 1152, 94, 1, 33, "Input"],
+Cell[36925, 1155, 91, 1, 33, "Input"]
 }
 ]
 *)
