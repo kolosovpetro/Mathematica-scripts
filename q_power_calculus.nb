@@ -1,0 +1,351 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     11563,        343]
+NotebookOptionsPosition[     10609,        308]
+NotebookOutlinePosition[     10950,        323]
+CellTagsIndexPosition[     10907,        320]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<MainDefinitions`\>\"", "]"}]], "Input"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"sigma2", "[", 
+    RowBox[{"q_", ",", " ", "x_"}], "]"}], ":=", " ", 
+   RowBox[{"x", "^", "2"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"rho2", "[", 
+    RowBox[{"q_", ",", " ", "x_"}], "]"}], ":=", " ", 
+   RowBox[{"x", "^", 
+    RowBox[{"(", 
+     RowBox[{"1", "/", "q"}], ")"}]}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.7962327308347583`*^9, 3.796232739770405*^9}, {
+  3.7962380438996935`*^9, 3.7962380477633166`*^9}, {3.796238089963378*^9, 
+  3.7962380919305754`*^9}, {3.7962383192973814`*^9, 3.796238359872898*^9}, {
+  3.796238403369897*^9, 3.7962384047841043`*^9}, {3.7962384954405603`*^9, 
+  3.796238495791794*^9}, {3.7962389613567457`*^9, 3.7962389870121617`*^9}, {
+  3.7962390420532866`*^9, 3.7962390442523327`*^9}, {3.7962391543642497`*^9, 
+  3.7962391562040076`*^9}, {3.796239321985714*^9, 3.796239322113801*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"QPowerDifference2X", "[", 
+    RowBox[{
+    "m_", ",", " ", "x_", ",", " ", "b_", ",", " ", "t_", ",", " ", "q_"}], 
+    "]"}], ":=", " ", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"P", "[", 
+       RowBox[{"m", ",", " ", 
+        RowBox[{"sigma2", "[", 
+         RowBox[{"q", ",", " ", "x"}], "]"}], ",", " ", "b"}], "]"}], " ", 
+      "-", " ", 
+      RowBox[{"P", "[", 
+       RowBox[{"m", ",", " ", "t", ",", " ", "b"}], "]"}]}], ")"}], "/", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"sigma2", "[", 
+       RowBox[{"q", ",", " ", "x"}], "]"}], " ", "-", " ", "t"}], ")"}]}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.7962327604103384`*^9, 3.7962327610344467`*^9}, {
+   3.7962331173041005`*^9, 3.7962331174719195`*^9}, {3.796233268087273*^9, 
+   3.796233268246642*^9}, 3.7962335521155725`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"QPowerDerivative2X", "[", 
+    RowBox[{"m_", ",", " ", "x_", ",", " ", "b_", ",", " ", "q_"}], "]"}], 
+   " ", ":=", " ", 
+   RowBox[{"Expand", "[", 
+    RowBox[{"Limit", "[", 
+     RowBox[{
+      RowBox[{"QPowerDifference2X", "[", 
+       RowBox[{
+       "m", ",", " ", "x", ",", " ", "b", ",", " ", "t", ",", " ", "q"}], 
+       "]"}], ",", " ", 
+      RowBox[{"t", "\[Rule]", " ", "x"}]}], "]"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.7962328029145164`*^9, 3.7962328034342337`*^9}, {
+  3.796233568444104*^9, 3.796233569004361*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"QPowerDifference1B", "[", 
+    RowBox[{
+    "m_", ",", " ", "x_", ",", " ", "b_", ",", " ", "t_", ",", " ", "q_"}], 
+    "]"}], ":=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"P", "[", 
+       RowBox[{"m", ",", " ", "x", ",", " ", 
+        RowBox[{"sigma2", "[", 
+         RowBox[{"q", ",", " ", "b"}], "]"}]}], "]"}], "-", " ", 
+      RowBox[{"P", "[", 
+       RowBox[{"m", ",", " ", "x", ",", " ", "t"}], "]"}]}], ")"}], "/", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"sigma2", "[", 
+       RowBox[{"q", ",", " ", "b"}], "]"}], " ", "-", " ", "b"}], ")"}]}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.796232830169603*^9, 3.7962328310335464`*^9}, {
+  3.7962331198877096`*^9, 3.796233120071087*^9}, {3.796233270839926*^9, 
+  3.7962332710466557`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"QPowerDerivative1B", "[", 
+    RowBox[{"m_", ",", " ", "x_", ",", " ", "b_", ",", " ", "q_"}], "]"}], ":=",
+    " ", 
+   RowBox[{"Limit", "[", 
+    RowBox[{
+     RowBox[{"QPowerDifference1B", "[", 
+      RowBox[{
+      "m", ",", " ", "x", ",", " ", "b", ",", " ", "t", ",", " ", "q"}], 
+      "]"}], ",", " ", 
+     RowBox[{"t", "\[Rule]", " ", "b"}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.796232847297556*^9, 3.7962328479860783`*^9}, {
+  3.7962335732519207`*^9, 3.7962335758284492`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"QPowerOddPowerDer", "[", 
+    RowBox[{"m_", ",", " ", "x_"}], "]"}], ":=", " ", 
+   RowBox[{"Limit", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"sigma2", "[", 
+          RowBox[{"q", ",", " ", "x"}], "]"}], "^", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"2", "m"}], "+", "1"}], ")"}]}], " ", "-", " ", 
+        RowBox[{"t", "^", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"2", "m"}], "+", "1"}], ")"}]}]}], ")"}], "/", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"sigma2", "[", 
+         RowBox[{"q", ",", " ", "x"}], "]"}], "-", " ", "t"}], ")"}]}], ",", 
+     " ", 
+     RowBox[{"t", "\[Rule]", " ", "x"}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.7962328640924997`*^9, 3.796232961001238*^9}, {
+  3.796237988091897*^9, 3.796238024531884*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"QPowerOddPowerDer", "[", 
+  RowBox[{"1", ",", " ", "x"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7962329628995123`*^9, 3.796232989952608*^9}, {
+  3.7962331664795113`*^9, 3.796233166614847*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["x", "2"], " ", 
+  RowBox[{"(", 
+   RowBox[{"1", "+", "x", "+", 
+    SuperscriptBox["x", "2"]}], ")"}]}]], "Output",
+ CellChangeTimes->{
+  3.79623729064596*^9, {3.7962380316325817`*^9, 3.79623805894484*^9}, {
+   3.796238096020257*^9, 3.7962381046645627`*^9}, 3.7962381728597507`*^9, 
+   3.7962382779043283`*^9, {3.7962383236239405`*^9, 3.796238363712932*^9}, {
+   3.796238408780983*^9, 3.7962384152084956`*^9}, 3.796238467099161*^9, 
+   3.796239049620263*^9, {3.796239169552749*^9, 3.796239176553976*^9}, 
+   3.7962392527669106`*^9, 3.7962393262646737`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Conj1", "[", "m_", "]"}], ":=", " ", 
+   RowBox[{"Limit", "[", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"QPowerDerivative2X", "[", 
+        RowBox[{"m", ",", " ", "x", ",", " ", 
+         RowBox[{"sigma2", "[", 
+          RowBox[{"q", ",", " ", "b"}], "]"}], ",", " ", "q"}], "]"}], " ", 
+       "+", " ", 
+       RowBox[{"QPowerDerivative1B", "[", 
+        RowBox[{"m", ",", " ", "x", ",", " ", "b", ",", " ", "q"}], "]"}]}], 
+      ")"}], ",", " ", 
+     RowBox[{"b", "\[Rule]", " ", "x"}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.796233043296424*^9, 3.7962330618967314`*^9}, {
+   3.796233094104948*^9, 3.7962330995042415`*^9}, {3.7962331592080765`*^9, 
+   3.7962331595995293`*^9}, {3.7962332125680466`*^9, 3.796233214503589*^9}, {
+   3.7962332833989725`*^9, 3.7962332853587747`*^9}, {3.7962333621265697`*^9, 
+   3.796233372470177*^9}, {3.796233402790125*^9, 3.7962334033331213`*^9}, {
+   3.796233598252405*^9, 3.7962336004678855`*^9}, {3.796237275217684*^9, 
+   3.7962372826409235`*^9}, {3.7962382169945426`*^9, 
+   3.7962382178180923`*^9}, {3.796238294970254*^9, 3.796238301369429*^9}, 
+   3.7962389934446177`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Conj1", "[", "1", "]"}]], "Input",
+ CellChangeTimes->{{3.7962330642545767`*^9, 3.79623306611191*^9}, 
+   3.796238994757769*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["x", "2"], " ", 
+  RowBox[{"(", 
+   RowBox[{"1", "+", "x", "+", 
+    SuperscriptBox["x", "2"]}], ")"}]}]], "Output",
+ CellChangeTimes->{
+  3.7962330675667024`*^9, 3.7962331042107954`*^9, 3.7962331698144536`*^9, 
+   3.79623322231029*^9, {3.796233334229678*^9, 3.7962333512395763`*^9}, {
+   3.796233399577772*^9, 3.7962334061281466`*^9}, 3.796233606041754*^9, 
+   3.796233659884389*^9, 3.796237300284008*^9, {3.796238037144797*^9, 
+   3.7962380771802464`*^9}, 3.796238110689925*^9, 3.7962382119849405`*^9, {
+   3.796238287913562*^9, 3.7962383765083075`*^9}, {3.7962384192107477`*^9, 
+   3.7962384218222556`*^9}, 3.796238472346023*^9, 3.796238999723691*^9, 
+   3.7962391650109367`*^9, 3.796239197892802*^9, 3.7962392507196317`*^9, 
+   3.796239333119236*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Conj2", "[", "m_", "]"}], ":=", " ", 
+   RowBox[{"Limit", "[", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"QPowerDerivative2X", "[", 
+        RowBox[{"m", ",", " ", "x", ",", " ", "b", ",", " ", "q"}], "]"}], 
+       " ", "+", " ", 
+       RowBox[{"QPowerDerivative1B", "[", 
+        RowBox[{"m", ",", " ", "x", ",", 
+         RowBox[{"b", "^", 
+          RowBox[{"(", 
+           RowBox[{"1", "/", "q"}], ")"}]}], ",", " ", "q"}], "]"}]}], ")"}], 
+     ",", " ", 
+     RowBox[{"b", "\[Rule]", " ", "x"}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.796239014548582*^9, 3.7962390284283204`*^9}, {
+  3.7962390828525033`*^9, 3.7962391392355757`*^9}, {3.796239281667276*^9, 
+  3.7962392869145737`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Conj2", "[", "1", "]"}]], "Input",
+ CellChangeTimes->{{3.796239053714395*^9, 3.7962390583959136`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"3", " ", 
+   SuperscriptBox["x", "2"]}], "+", 
+  RowBox[{"3", " ", 
+   SuperscriptBox["x", 
+    RowBox[{"1", "+", 
+     FractionBox["1", "q"]}]]}], "+", 
+  RowBox[{"3", " ", 
+   SuperscriptBox["x", 
+    FractionBox["1", "q"]]}], "-", 
+  RowBox[{"2", " ", 
+   SuperscriptBox["x", 
+    RowBox[{"2", "/", "q"}]]}], "+", 
+  RowBox[{
+   SuperscriptBox[
+    RowBox[{"(", 
+     SuperscriptBox["x", 
+      FractionBox["1", "q"]], ")"}], "q"], " ", 
+   RowBox[{"(", 
+    RowBox[{"3", "-", 
+     RowBox[{"2", " ", 
+      SuperscriptBox["x", 
+       FractionBox["1", "q"]]}], "-", 
+     RowBox[{"2", " ", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        SuperscriptBox["x", 
+         FractionBox["1", "q"]], ")"}], "q"]}]}], ")"}]}], "+", 
+  RowBox[{"3", " ", "x", " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", "2"}], "+", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       SuperscriptBox["x", 
+        FractionBox["1", "q"]], ")"}], "q"]}], ")"}]}]}]], "Output",
+ CellChangeTimes->{{3.796239059111622*^9, 3.796239143216465*^9}, 
+   3.796239268857222*^9, 3.7962393033075976`*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.796233417076911*^9, 3.7962334416775656`*^9}, 
+   3.796239003796771*^9}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.796239004915654*^9, 3.79623900492262*^9}}]
+},
+WindowSize->{1350, 709},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (July 28, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 81, 1, 30, "Input"],
+Cell[642, 23, 902, 19, 50, "Input"],
+Cell[1547, 44, 867, 24, 30, "Input"],
+Cell[2417, 70, 591, 15, 30, "Input"],
+Cell[3011, 87, 822, 23, 30, "Input"],
+Cell[3836, 112, 547, 14, 30, "Input"],
+Cell[4386, 128, 908, 27, 30, "Input"],
+Cell[CellGroupData[{
+Cell[5319, 159, 217, 4, 30, "Input"],
+Cell[5539, 165, 598, 12, 33, "Output"]
+}, Open  ]],
+Cell[6152, 180, 1197, 25, 30, "Input"],
+Cell[CellGroupData[{
+Cell[7374, 209, 151, 3, 30, "Input"],
+Cell[7528, 214, 795, 15, 33, "Output"]
+}, Open  ]],
+Cell[8338, 232, 772, 20, 30, "Input"],
+Cell[CellGroupData[{
+Cell[9135, 256, 126, 2, 30, "Input"],
+Cell[9264, 260, 1112, 38, 49, "Output"]
+}, Open  ]],
+Cell[10391, 301, 120, 2, 30, "Input"],
+Cell[10514, 305, 91, 1, 30, "Input"]
+}
+]
+*)
+

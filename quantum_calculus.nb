@@ -1,0 +1,391 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     12681,        383]
+NotebookOptionsPosition[     11264,        336]
+NotebookOutlinePosition[     11607,        351]
+CellTagsIndexPosition[     11564,        348]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<MainDefinitions`\>\"", "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{
+  "Quantum", " ", "derivatives", " ", "and", " ", "related", " ", 
+   "functions"}], " ", "*)"}]], "Input",
+ CellChangeTimes->{{3.7962206897032375`*^9, 3.7962207013861265`*^9}, {
+  3.796224195201364*^9, 3.7962241956961884`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"P1", "[", 
+    RowBox[{"m_", ",", " ", "n_"}], "]"}], ":=", " ", 
+   RowBox[{"P", "[", 
+    RowBox[{"m", ",", " ", "n", ",", " ", "n"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.796220749607052*^9, 3.796220796665879*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"sigma1", "[", 
+    RowBox[{"q_", ",", " ", "x_"}], "]"}], ":=", " ", 
+   RowBox[{"q", "*", "x"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.796220816718053*^9, 3.796220840697159*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{
+  "Definition", " ", "of", " ", "partial", " ", "difference", " ", "of", " ", 
+   RowBox[{"P1", "[", 
+    RowBox[{"m", ",", " ", "x"}], "]"}], " ", "by", " ", "x"}], " ", 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.7962242333768873`*^9, 3.796224265176317*^9}, {
+  3.796224484678937*^9, 3.7962244863260317`*^9}, {3.7962286559756603`*^9, 
+  3.7962286599117994`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"QDifference1X", "[", 
+    RowBox[{"m_", ",", " ", "x_", ",", " ", "t_", ",", " ", "q_"}], "]"}], ":=",
+    " ", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"P1", "[", 
+       RowBox[{"m", ",", " ", 
+        RowBox[{"sigma1", "[", 
+         RowBox[{"q", ",", " ", "x"}], "]"}]}], "]"}], "-", 
+      RowBox[{"P1", "[", 
+       RowBox[{"m", ",", " ", "t"}], "]"}]}], ")"}], "/", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"sigma1", "[", 
+       RowBox[{"q", ",", " ", "x"}], "]"}], " ", "-", " ", "t"}], ")"}]}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.7962208650480485`*^9, 3.7962209091525583`*^9}, {
+   3.796220943000715*^9, 3.7962209795761127`*^9}, 3.7962210470638423`*^9, {
+   3.7962213027977777`*^9, 3.796221319389942*^9}, {3.796223155264707*^9, 
+   3.79622315875234*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{
+  "Definition", " ", "of", " ", "partial", " ", "derivative", " ", "of", " ", 
+   RowBox[{"P1", "[", 
+    RowBox[{"m", ",", " ", "x"}], "]"}], " ", "by", " ", "x"}], " ", 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.796228669880021*^9, 3.796228672767968*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"QDerivative1X", "[", 
+    RowBox[{"m_", ",", " ", "x_", ",", " ", "q_"}], "]"}], ":=", " ", 
+   RowBox[{"Limit", "[", 
+    RowBox[{
+     RowBox[{"QDifference", "[", 
+      RowBox[{"m", ",", " ", "x", ",", " ", "t", ",", " ", "q"}], "]"}], ",", 
+     " ", 
+     RowBox[{"t", "\[Rule]", " ", "x"}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.7962210415870132`*^9, 3.796221044255486*^9}, {
+   3.7962211051978626`*^9, 3.7962211539505224`*^9}, 3.7962213060782723`*^9}],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{"Difference", " ", "of", " ", "complete", " ", 
+   RowBox[{"P", "[", 
+    RowBox[{"m", ",", " ", "x", ",", " ", "b"}], "]"}], " ", "by", " ", "x"}],
+   " ", "*)"}]], "Input",
+ CellChangeTimes->{{3.7962285062955933`*^9, 3.796228523088911*^9}, {
+  3.7962286846404324`*^9, 3.7962286892803745`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"QDifference2X", "[", 
+    RowBox[{
+    "m_", ",", " ", "x_", ",", " ", "b_", ",", " ", "t_", ",", " ", "q_"}], 
+    "]"}], ":=", " ", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"P", "[", 
+       RowBox[{"m", ",", " ", 
+        RowBox[{"sigma1", "[", 
+         RowBox[{"q", ",", " ", "x"}], "]"}], ",", " ", "b"}], "]"}], " ", 
+      "-", " ", 
+      RowBox[{"P", "[", 
+       RowBox[{"m", ",", " ", "t", ",", " ", "b"}], "]"}]}], ")"}], "/", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"sigma1", "[", 
+       RowBox[{"q", ",", " ", "x"}], "]"}], " ", "-", " ", "t"}], ")"}]}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.796224581346014*^9, 3.796224709117399*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{"Derivative", " ", "of", " ", "complete", " ", 
+   RowBox[{"P", "[", 
+    RowBox[{"m", ",", " ", "x", ",", " ", "b"}], "]"}], " ", "by", " ", "x"}],
+   " ", "*)"}]], "Input",
+ CellChangeTimes->{{3.796228539057167*^9, 3.796228541016678*^9}, {
+  3.7962286924881907`*^9, 3.7962286951361346`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"QDerivative2X", "[", 
+    RowBox[{"m_", ",", " ", "x_", ",", " ", "b_", ",", " ", "q_"}], "]"}], 
+   " ", ":=", " ", 
+   RowBox[{"Expand", "[", 
+    RowBox[{"Limit", "[", 
+     RowBox[{
+      RowBox[{"QDifference2X", "[", 
+       RowBox[{
+       "m", ",", " ", "x", ",", " ", "b", ",", " ", "t", ",", " ", "q"}], 
+       "]"}], ",", " ", 
+      RowBox[{"t", "\[Rule]", " ", "x"}]}], "]"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.796224734789564*^9, 3.7962247798999195`*^9}, {
+  3.796224853172575*^9, 3.7962248571634226`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{"Difference", " ", "of", " ", "complete", " ", 
+   RowBox[{"P", "[", 
+    RowBox[{"m", ",", " ", "x", ",", " ", "b"}], "]"}], " ", "by", " ", "b"}],
+   " ", "*)"}]], "Input",
+ CellChangeTimes->{{3.796228711280186*^9, 3.796228711431285*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"QDifference1B", "[", 
+    RowBox[{
+    "m_", ",", " ", "x_", ",", " ", "b_", ",", " ", "t_", ",", " ", "q_"}], 
+    "]"}], ":=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"P", "[", 
+       RowBox[{"m", ",", " ", "x", ",", " ", 
+        RowBox[{"sigma1", "[", 
+         RowBox[{"q", ",", " ", "b"}], "]"}]}], "]"}], "-", " ", 
+      RowBox[{"P", "[", 
+       RowBox[{"m", ",", " ", "x", ",", " ", "t"}], "]"}]}], ")"}], "/", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"sigma1", "[", 
+       RowBox[{"q", ",", " ", "b"}], "]"}], " ", "-", " ", "b"}], ")"}]}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.796221338145922*^9, 3.796221374172839*^9}, {
+  3.796221405028537*^9, 3.796221519851843*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{"Derivative", " ", "of", " ", "complete", " ", 
+   RowBox[{"P", "[", 
+    RowBox[{"m", ",", " ", "x", ",", " ", "b"}], "]"}], " ", "by", " ", "b"}],
+   " ", "*)"}]], "Input",
+ CellChangeTimes->{{3.796228739775572*^9, 3.796228741823817*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"QDerivative1B", "[", 
+    RowBox[{"m_", ",", " ", "x_", ",", " ", "b_", ",", " ", "q_"}], "]"}], ":=",
+    " ", 
+   RowBox[{"Limit", "[", 
+    RowBox[{
+     RowBox[{"QDifference1B", "[", 
+      RowBox[{
+      "m", ",", " ", "x", ",", " ", "b", ",", " ", "t", ",", " ", "q"}], 
+      "]"}], ",", " ", 
+     RowBox[{"t", "\[Rule]", " ", "b"}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.7962215511400194`*^9, 3.7962216071870337`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{
+   RowBox[{"Following", " ", "limit", " ", "gives", " ", 
+    RowBox[{"x", "^", "2"}], "m", " ", "if", " ", "b"}], " ", "=", " ", "x"}],
+   " ", "*)"}]], "Input",
+ CellChangeTimes->{{3.796221937049361*^9, 3.796221959569146*^9}, {
+  3.796224035153173*^9, 3.7962240358500395`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Limit", "[", 
+  RowBox[{
+   RowBox[{"Expand", "[", 
+    RowBox[{"Limit", "[", 
+     RowBox[{
+      RowBox[{"QDerivative1B", "[", 
+       RowBox[{"2", ",", " ", "x", ",", " ", "b", ",", " ", "q"}], "]"}], ",",
+       " ", 
+      RowBox[{"b", "\[Rule]", " ", "x"}]}], "]"}], "]"}], ",", " ", 
+   RowBox[{"q", "\[Rule]", " ", "2"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.796221747043718*^9, 3.7962218074822874`*^9}, {
+  3.7962228668348165`*^9, 3.796222928626055*^9}, {3.79622330244759*^9, 
+  3.7962233084232955`*^9}, {3.7962233824474134`*^9, 3.7962233885186715`*^9}, {
+  3.7962234508625216`*^9, 3.7962234510376396`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{"Check", " ", "of", " ", "conjecture"}], " ", "*)"}]], "Input",
+ CellChangeTimes->{{3.7962287495639005`*^9, 3.796228754527956*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Conj", "[", "m_", "]"}], ":=", " ", 
+   RowBox[{"Limit", "[", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"QDerivative2X", "[", 
+        RowBox[{"m", ",", " ", "x", ",", " ", 
+         RowBox[{"q", "*", "b"}], ",", " ", "q"}], "]"}], " ", "+", " ", 
+       RowBox[{"QDerivative1B", "[", 
+        RowBox[{"m", ",", " ", "x", ",", " ", "b", ",", " ", "q"}], "]"}]}], 
+      ")"}], ",", " ", 
+     RowBox[{"b", "\[Rule]", " ", "x"}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.796228778838481*^9, 3.796228905222472*^9}, {
+  3.7962291024205275`*^9, 3.796229141508753*^9}, {3.7962291773801436`*^9, 
+  3.7962292919631834`*^9}, {3.7962293228919535`*^9, 3.7962293240758705`*^9}, {
+  3.7962293596514287`*^9, 3.79622940594643*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Conj", "[", "2", "]"}]], "Input",
+ CellChangeTimes->{{3.796229294121729*^9, 3.796229296852053*^9}, {
+  3.7962293425876703`*^9, 3.796229351115305*^9}, {3.7962294118666015`*^9, 
+  3.79622941235493*^9}, {3.7962294958911037`*^9, 3.796229495985397*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"1", "+", "q", "+", 
+    SuperscriptBox["q", "2"], "+", 
+    SuperscriptBox["q", "3"], "+", 
+    SuperscriptBox["q", "4"]}], ")"}], " ", 
+  SuperscriptBox["x", "4"]}]], "Output",
+ CellChangeTimes->{
+  3.796229297580922*^9, {3.796229344188181*^9, 3.79622937592337*^9}, 
+   3.7962294128722725`*^9, 3.7962294968258233`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"QDerivative1B", "[", 
+  RowBox[{"1", ",", " ", "x", ",", " ", "x", ",", " ", "q"}], "]"}]], "Input",
+ CellChangeTimes->{{3.79623067804156*^9, 3.7962307315848637`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"x", " ", 
+  RowBox[{"(", 
+   RowBox[{"x", "-", 
+    RowBox[{"2", " ", 
+     SuperscriptBox["q", "2"], " ", "x"}], "+", 
+    RowBox[{"q", " ", 
+     RowBox[{"(", 
+      RowBox[{"3", "+", "x"}], ")"}]}]}], ")"}]}]], "Output",
+ CellChangeTimes->{{3.796230687094635*^9, 3.796230732143628*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"QPowerDerivative2X", "[", 
+  RowBox[{"1", ",", " ", "x", ",", " ", "b", ",", " ", "q"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7962334813968973`*^9, 3.7962334911094985`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"-", "3"}], " ", "b"}], "+", 
+  RowBox[{"3", " ", 
+   SuperscriptBox["b", "2"]}]}]], "Output",
+ CellChangeTimes->{{3.7962334842491074`*^9, 3.7962334920960712`*^9}}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.7962334679581137`*^9, 3.796233468372692*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.796220798367186*^9, 3.7962208059782143`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.796220806770241*^9, 3.7962208067787523`*^9}}]
+},
+WindowSize->{1366, 725},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (July 28, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 81, 1, 30, "Input"],
+Cell[642, 23, 274, 6, 30, "Input"],
+Cell[919, 31, 275, 7, 30, "Input"],
+Cell[1197, 40, 229, 6, 30, "Input"],
+Cell[1429, 48, 409, 9, 30, "Input"],
+Cell[1841, 59, 844, 23, 30, "Input"],
+Cell[2688, 84, 303, 7, 30, "Input"],
+Cell[2994, 93, 517, 12, 30, "Input"],
+Cell[3514, 107, 340, 7, 30, "Input"],
+Cell[3857, 116, 730, 22, 30, "Input"],
+Cell[4590, 140, 338, 7, 30, "Input"],
+Cell[4931, 149, 581, 15, 30, "Input"],
+Cell[5515, 166, 285, 6, 30, "Input"],
+Cell[5803, 174, 762, 22, 30, "Input"],
+Cell[6568, 198, 285, 6, 30, "Input"],
+Cell[6856, 206, 486, 13, 30, "Input"],
+Cell[7345, 221, 325, 7, 30, "Input"],
+Cell[7673, 230, 644, 14, 30, "Input"],
+Cell[8320, 246, 176, 3, 30, "Input"],
+Cell[8499, 251, 794, 18, 30, "Input"],
+Cell[CellGroupData[{
+Cell[9318, 273, 272, 4, 30, "Input"],
+Cell[9593, 279, 371, 10, 33, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10001, 294, 191, 3, 30, "Input"],
+Cell[10195, 299, 313, 9, 33, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10545, 313, 199, 3, 30, "Input"],
+Cell[10747, 318, 210, 6, 63, "Output"]
+}, Open  ]],
+Cell[10972, 327, 94, 1, 30, "Input"],
+Cell[11069, 330, 94, 1, 30, "Input"],
+Cell[11166, 333, 94, 1, 30, InheritFromParent]
+}
+]
+*)
+
