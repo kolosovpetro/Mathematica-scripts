@@ -1,0 +1,263 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7101,        255]
+NotebookOptionsPosition[      5915,        208]
+NotebookOutlinePosition[      6256,        223]
+CellTagsIndexPosition[      6213,        220]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<MainDefinitions`\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.79641784634671*^9, 3.7964178552076216`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<TimeScaleCalculus`\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.796417857132905*^9, 3.7964178661028905`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"theoremLocal", "[", "m_", "]"}], " ", ":=", " ", 
+   RowBox[{"Expand", "[", 
+    RowBox[{
+     RowBox[{"timeScaleDerivativeX", "[", 
+      RowBox[{"m", ",", " ", "x", ",", " ", 
+       RowBox[{"sigma", "[", 
+        RowBox[{"q", ",", " ", "x"}], "]"}], ",", " ", "q"}], "]"}], " ", "+",
+      " ", 
+     RowBox[{"timeScaleDerivativeB", "[", 
+      RowBox[{"m", ",", " ", "x", ",", " ", "x", ",", " ", "q"}], "]"}]}], 
+    "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.7964180149102163`*^9, 3.796418015342506*^9}, {
+  3.7964181329179554`*^9, 3.7964181434299707`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"f", "[", 
+  RowBox[{"1", ",", " ", "n", ",", " ", "b"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7964178694211063`*^9, 3.7964178734317822`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", "b"}], " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "3"}], " ", "b"}], "+", 
+    RowBox[{"2", " ", 
+     SuperscriptBox["b", "2"]}], "+", 
+    RowBox[{"3", " ", "n"}], "-", 
+    RowBox[{"3", " ", "b", " ", "n"}]}], ")"}]}]], "Output",
+ CellChangeTimes->{3.79641787381804*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"sigma", "[", 
+  RowBox[{"x", ",", " ", "q"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7964178923033733`*^9, 3.7964178949031076`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"q", " ", "x"}]], "Output",
+ CellChangeTimes->{3.796417895462486*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"timeScaleDifferenceX", "[", 
+  RowBox[{"1", ",", " ", "x", ",", " ", "b", ",", " ", "t", ",", " ", "q"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.796417909078566*^9, 3.7964179147423444`*^9}}],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{
+   RowBox[{"b", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "3"}], " ", "b"}], "+", 
+      RowBox[{"2", " ", 
+       SuperscriptBox["b", "2"]}], "+", 
+      RowBox[{"3", " ", "t"}], "-", 
+      RowBox[{"3", " ", "b", " ", "t"}]}], ")"}]}], "-", 
+   RowBox[{"b", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "3"}], " ", "b"}], "+", 
+      RowBox[{"2", " ", 
+       SuperscriptBox["b", "2"]}], "+", 
+      RowBox[{"3", " ", "q", " ", "x"}], "-", 
+      RowBox[{"3", " ", "b", " ", "q", " ", "x"}]}], ")"}]}]}], 
+  RowBox[{
+   RowBox[{"-", "t"}], "+", 
+   RowBox[{"q", " ", "x"}]}]]], "Output",
+ CellChangeTimes->{3.796417916113261*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"theorem", "[", "1", "]"}]], "Input",
+ CellChangeTimes->{{3.796417946250369*^9, 3.796417947742363*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["x", "2"], "+", 
+  RowBox[{"q", " ", 
+   SuperscriptBox["x", "2"]}], "+", 
+  RowBox[{
+   SuperscriptBox["q", "2"], " ", 
+   SuperscriptBox["x", "2"]}]}]], "Output",
+ CellChangeTimes->{3.7964179482437*^9, 3.7964182751923656`*^9, 
+  3.7964183366073437`*^9, 3.7964183688663154`*^9, 3.7964183998629985`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"timeScaleDerivativeX", "[", 
+  RowBox[{"1", ",", " ", "x", ",", " ", "b", ",", " ", "q"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7964179737267027`*^9, 3.7964179796706667`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"-", "3"}], " ", "b"}], "+", 
+  RowBox[{"3", " ", 
+   SuperscriptBox["b", "2"]}]}]], "Output",
+ CellChangeTimes->{3.7964179801900187`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"theoremLocal", "[", "1", "]"}]], "Input",
+ CellChangeTimes->{{3.7964180200446424`*^9, 3.7964180230866737`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["x", "2"], "+", 
+  RowBox[{"q", " ", 
+   SuperscriptBox["x", "2"]}], "+", 
+  RowBox[{
+   SuperscriptBox["q", "2"], " ", 
+   SuperscriptBox["x", "2"]}]}]], "Output",
+ CellChangeTimes->{
+  3.7964180236490483`*^9, 3.7964180981997905`*^9, {3.7964181514953527`*^9, 
+   3.796418172304717*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"timeScaleDerivaitveOddPower", "[", 
+  RowBox[{"1", ",", " ", "x"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7964182187016726`*^9, 3.7964182196853294`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["x", "2"], "+", 
+  RowBox[{"q", " ", 
+   SuperscriptBox["x", "2"]}], "+", 
+  RowBox[{
+   SuperscriptBox["q", "2"], " ", 
+   SuperscriptBox["x", "2"]}]}]], "Output",
+ CellChangeTimes->{3.7964182202186856`*^9, 3.796418260966891*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"timeScaleDerivativeB", "[", 
+  RowBox[{"1", ",", " ", "x", ",", " ", "b", ",", " ", "q"}], "]"}]], "Input",
+ CellChangeTimes->{{3.79641805667008*^9, 3.7964180622858276`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"-", "2"}], " ", 
+   SuperscriptBox["b", "2"], " ", 
+   RowBox[{"(", 
+    RowBox[{"1", "+", "q", "+", 
+     SuperscriptBox["q", "2"]}], ")"}]}], "-", 
+  RowBox[{"3", " ", "x"}], "+", 
+  RowBox[{"3", " ", "b", " ", 
+   RowBox[{"(", 
+    RowBox[{"1", "+", "q"}], ")"}], " ", 
+   RowBox[{"(", 
+    RowBox[{"1", "+", "x"}], ")"}]}]}]], "Output",
+ CellChangeTimes->{3.796418062748141*^9, 3.7964180945033264`*^9}]
+}, Open  ]]
+},
+WindowSize->{1350, 709},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (July 28, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 148, 2, 30, "Input"],
+Cell[709, 24, 151, 2, 30, "Input"],
+Cell[863, 28, 615, 15, 30, "Input"],
+Cell[CellGroupData[{
+Cell[1503, 47, 167, 3, 30, "Input"],
+Cell[1673, 52, 334, 11, 33, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2044, 68, 156, 3, 30, "Input"],
+Cell[2203, 73, 92, 2, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2332, 80, 217, 4, 30, "Input"],
+Cell[2552, 86, 729, 24, 54, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3318, 115, 126, 2, 30, "Input"],
+Cell[3447, 119, 344, 9, 63, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3828, 133, 201, 3, 30, "Input"],
+Cell[4032, 138, 184, 6, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4253, 149, 135, 2, 30, "Input"],
+Cell[4391, 153, 328, 10, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4756, 168, 178, 3, 30, "Input"],
+Cell[4937, 173, 271, 8, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5245, 186, 198, 3, 30, "Input"],
+Cell[5446, 191, 453, 14, 33, "Output"]
+}, Open  ]]
+}
+]
+*)
+
