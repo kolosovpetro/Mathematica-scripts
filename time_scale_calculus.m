@@ -15,11 +15,11 @@ theorem::usage= "represents main theorem of the manuscript."
 Begin["`Private`"]
 
 f[m_, x_, b_] := P[m, x, b];
-sigma[x_, q_] := x*q;
+sigma[x_, q_] := x;
 timeScaleDifferenceX[m_, x_, b_, t_, q_] := (P[m, sigma[q, x], b] - P[m, t, b])/(sigma[q, x] - t);
 timeScaleDerivativeX[m_, x_, b_, q_] := Expand[Limit[timeScaleDifferenceX[m, x, b, t, q], t -> x]];
-timeScaleDifferenceB[m_, x_, b_, t_, q_] := (P[m, x, sigma[q, b]]- P[m, x, t])/(sigma[q, b] - b);
-timeScaleDerivativeB[m_, x_, b_, q_] := Limit[timeScaleDifferenceB[m, x, b, t, q], t-> b];
+timeScaleDifferenceB[m_, x_, b_, t_, q_] := Expand[(P[m, x, sigma[q, b]]- P[m, x, t])/(sigma[q, b] - b)];
+timeScaleDerivativeB[m_, x_, b_, q_] := Expand[Limit[timeScaleDifferenceB[m, x, b, t, q], t-> b]];
 timeScaleDerivaitveOddPower[m_, x_]:= Expand[Limit[(sigma[Global`q, x]^(2m+1) - t^(2m+1))/(sigma[Global`q, x]- t), t-> x]];
 theorem[m_] := Expand[timeScaleDerivativeX[m, Global`x, sigma[Global`q, Global`x], Global`q] + timeScaleDerivativeB[m, Global`x, Global`x, Global`q]];
 
