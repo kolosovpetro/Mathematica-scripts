@@ -27,6 +27,7 @@ Pow::usage= "Pow gives a power function in terms of product of Iverson bracket a
 ConvPowerIdentity::usage= "Verifies the convolution and binomial expansion identity."
 ConvPowerIdentityStrict::usage= "Verifies the convolution and binomial expansion identity."
 ConvPowerIdentityParametric::usage= "Verifies the convolution and binomial expansion identity."
+ConvPowerIdentityStrictParametric::usage= "Verifies the convolution and binomial expansion identity."
 Iverson::usage= "Gives a true if s is even, false if s is odd. "
 
 Begin["`Private`"]
@@ -75,6 +76,7 @@ MatrixPolynomialL[m_, M_, N_] := Column[Table[L[m, n, k], {n, -N, N}, {k, -M, M}
 ConvPowerIdentity[m_, x_] := Refine[Sum[CoeffA[m,r] * MacaulayDiscConv[x, r, 0], {r, 0, m}], Element[x, Integers], Assumptions -> x>0];
 ConvPowerIdentityStrict[m_, x_] := Refine[Sum[CoeffA[m,r] * MacaulayDiscConvStrict[x, r, 0], {r, 0, m}], Element[x, Integers], Assumptions -> x>0];
 ConvPowerIdentityParametric[m_, x_, a_] := Expand[Refine[Sum[CoeffA[m,r] * MacaulayDiscConv[x, r, a], {r, 0, m}], Element[x, Integers], Assumptions -> x>2*a]];
+ConvPowerIdentityStrictParametric[m_, x_, a_] := Expand[Refine[Sum[CoeffA[m,r] * MacaulayDiscConvStrict[x, r, a], {r, 0, m}], Element[x, Integers], Assumptions -> x>2*a]];
 
 End[ ]
 
