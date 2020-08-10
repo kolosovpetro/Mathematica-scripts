@@ -2,150 +2,81 @@
 
 BeginPackage["arxiv160302468`"]
 
-U::usage= "U[n,k] := k(n-k). "
-
-Q::usage= "Q[r_,n_] := Sum[k^r(n-k)^r,{k, 0, n-1}];"
-
-ConvolutionTable::usage= "ConvolutionTable[n] gives the n-th row triagle of Q[r_,n_] that is convolution of r-th power."
-
-TriangleQ::usage= "TriangleQ[n] gives n rows of triangle filled by Q[n,k], k<=n. "
-	
-TriangleCoeffA::usage= "TriangleCoeffA[j] prints a tringular array of coefficients CoeffA[n,k] consisting of j-rows."
-	
-ColumnTriangleA::usage= "ColumnTriangleA[j, t] prints t terms of j-th column of TriangleCoeffA[h]."
-
-DiagonalTriangleA::usage= "DiagonalTriangleA[r,t] prints t items of r-th diagonal of TriangleCoeffA[h]."
-
-CenteredColumnTriangleA::usage= "CenteredColumnTriangleA[r,t] prints t items of r-th centered column of TriangleCoeffA[h]."
-
-TriangleL::usage= "TriangleL[m_, t_] generates numerical triangle of t-rows filled by L[m, n, k]."
-
-GeneralizedTriangleL::usage= "GeneralizedTriangleL[m, t, radius] gives a generalized triangle TriangleL[m, t] with rows from -radius to +rad."
-
-RowGeneralizedTriangleL::usage= "RowGeneralizedTriangleL[m, t, radius] gives an t-th row of TriangleL[m, t] form -radius to +rad."
-
-RowSumGeneralizedTriangleL::usage= "RowSumGeneralizedTriangleL[m_, n_, radius_] gives the sum of n-th row of  GeneralizedTriangleL[m, t, radius] with radius_."
-
-RowTriangleL::usage= "RowTriangleL[m, n] prints n-th row of  TriangleL[m, t], t >= n."
-
-ColumnTriangleL::usage= "ColumnTriangleL[m, k, t] prints the t terms of k-th column of TriangleL[m, n], n >= k."
-
-ColumnSumTriangleL::usage= "ColumnSumTriangleL[m, r, s] gives the partial sums of ColumnTriangleL[m, k, t] over k from 0 to s."
-
-ClosedFormColumnSumL::usage= "ClosedFormColumnSumL[m_, k_, max_] gives the value of closed form of column sum of Triangle L ."
-
-CenteredColumnTriangleL::usage= "CenteredColumnTriangleL[m, r, t] gives t terms of r-th centered column of TriangleL[m, t]."
-
-OddPowerIdentity::usage= "OddPowerIdentity[n_, m_] gives integer n^(2m+1), by means of sum of L[m,n,k] for natural m,n."
-
-ClosedFormOddPowerIdentity::usage= "ClosedFormOddPowerIdentity[m_, T_] gives closed form of identity for any particular natural T."
-
-ClosedFormOddPowerIdentityByRadius::usage= "ClosedFormOddPowerIdentityByRadius[m_, T_, radius_] gives closed form of identity for any particular natural T from -radius to +radius."
-
-ClosedFormOddPowerIdentityList::usage= "ClosedFormOddPowerIdentityList[m, n, t] generates a list of ClosedFormOddPowerIdentity[m, T] containing t terms."
-
-ClosedFormCoefficient::usage= "ClosedFormCoefficient[m, l, t] prints the coefficient of l-th power in ClosedFormOddPowerIdentity[m_, T_] for any given T. Note that l =< t."
-
-ClosedFormCoefficientList::usage= "ClosedFormCoefficientList[m, r] prints r lines of ClosedFormCoefficient[m, l, t]."
-
-ClosedFormCoefficientColumn::usage= "ClosedFormCoefficientColumn[m, t, r] gives column of ClosedFormCoefficientList[m, r] of power t =< m."
-
-PolnomialPValues::usage= "Gives the polynomial P values for particular m, n, b. Takes 2 arguments: m, size."
-
-PolnomialPColumn::usage= "Gives the polynomial P values for column m, n, b. Takes 2 arguments: m, column (t), size."
-
-PolnomialPRow::usage= "Gives the polynomial P values for column m, n, b. Takes 2 arguments: m, row (t), size."
-
-BinomialTriangle::usage= "BinomialTriangle[n_, s_] prints binomial triangle of s rows for any integer n."
-
-Numerical::usage= "Numerical[n, k] gives terms of numerical expansion of monomials."
-
-NumericalTriangle::usage= "NumericalTriangle[n, k] gives triangle of Numerical[n, k]."
-
-CoeffLamda::usage= "CoeffLamda[m, r, k] gives Lamda coefficients from definition 1.6."
-
-LamdaOddPowerIdentity::usage= "LamdaOddPowerIdentity[T, s] gives an odd power identity T^(2s+1)."
-
-LamdaOddPowerIdentityClosedForm::usage= "LamdaOddPowerIdentityClosedForm[T, l, s] gives a closed form of odd power identity T^(2s+1) for two variables T,l from."
-
-ColumnSumClosedForm::usage= "ColumnSumClosedForm gives a closed for of column of L[m,n,k]."
+PiecewisePow::usage= "PiecewisePow[r_, t_, n_] is power function defined for f=n^r, defined for n >= t, otherwise is 0. "
+PiecewisePowDiscConv::usage= "Gives discrete convolution of funtion f[r, t, n]. "
+ContinuousConvf::usage= "Gives cont. convolution of funtion f[r, t, n]. "
+CoeffA::usage= "CoeffA[n,k] produces the k-th coefficient A in n-th row."
+ConvolveSum::usage= "ConvolveSum gives convolution-like sum of power."
+L::usage= "L[m, n, k] gives polynomial L. L[m, n, k] gives an integer value of polynomial L with repsect to m, n, k. For m=1 see triangle https://oeis.org/A287326."
+X::usage= "X[m_, t_, a_, b_] gives coefficient X."
+H::usage= "H[m_, t_, k_] gives coefficient H."
+P::usage= "P[m_, n_, a_, b_] gives the polynomial P."
+P2::usage= "P2 = Indicator * P."
+S::usage= "S gives an ordinary power sum."
+DiscConvTable::usage= "DiscConvTable gives a discrete self-convolution of power n for n>=0."
+MatrixPolynomialL::usage= "MatrixPolynomialL gives a MxN matrix of values of polynomial L."
+MacaulayPow::usage= "gives a Macaulay condiditons of x>=a."
+MacaulayPowStrict::usage= "gives a Macaulay condiditons of x>a."
+MacaulayDiscConv::usage= "gives a discrete convolution of MacaulayPow."
+MacaulayDiscConvStrict::usage= "gives a discrete convolution of MacaulayPowStrict."
+MacaulayDiscConvTable::usage= "gives a table consisting of discrete convolution of MacaulayPow."
+MacaulayDiscConvTableStrict::usage= "gives a table consisting of discrete convolution of MacaulayPowStrict."
+GeneralP::usage= "gives the generalized polynomial P."
+BinPoly::usage= "Gives a binomial coefficient (n,k) in polynomial form. "
+Pow::usage= "Pow gives a power function in terms of product of Iverson bracket and argument to floor power."
+ConvPowerIdentity::usage= "Verifies the convolution and binomial expansion identity."
+ConvPowerIdentityStrict::usage= "Verifies the convolution and binomial expansion identity."
+ConvPowerIdentityParametric::usage= "Verifies the convolution and binomial expansion identity."
+ConvPowerIdentityStrictParametric::usage= "Verifies the convolution and binomial expansion identity."
+Iverson::usage= "Gives a true if s is even, false if s is odd. "
 
 Begin["`Private`"]
-Needs["MainDefinitions`"]
+
+(* Definitions and conventions *)
 
 Unprotect[Power];
-
 Power[0|0., 0|0.] = 1;
-
 Protect[Power];
 
-U[n_, k_] := k(n-k);
+CoeffA[n_, k_] := 0;
+CoeffA[n_, k_] := (2k + 1) * Binomial[2k, k] * Sum[CoeffA[n, j] * Binomial[j, 2k + 1] * (-1)^(j - 1) / (j - k) * BernoulliB[2j - 2k], {j, 2k + 1, n}] /; 0 <= k < n;
+CoeffA[n_, k_] := (2n + 1) * Binomial[2n, n] /; k == n;
 
-Q[r_, n_] := Sum[U[n, k]^r, {k, 0, n-1}];
+L[m_, n_, k_] := Sum[CoeffA[m, r] * k^r * (n - k)^r, {r, 0, m}];
+P[m_, n_, b_] := Sum[L[m, n, k], {k, 0, b - 1}];
+H[m_, t_, b_] := Sum[Binomial[j, t] * CoeffA[m, j] * (-1)^j / (2j - t + 1) * Binomial[2j - t + 1, b] * BernoulliB[2j - t + 1 - b], {j, t, m}];
+X[m_, t_, j_] := Sum[(-1)^m * H[m, t, k] * j^k, {k, 1, 2m - t + 1}];
+S[p_, n_]:= Sum[k^p, {k, 0, n-1}];
 
-ConvolutionTable[n_]:= Column[Table[Q[r, s-r], {s, 0, n}, {r, 0, s}], Left];
+ConvolveSum[n_, r_, b_] := Sum[k^r (n - k)^r, {k, 0, b - 1}];
+PiecewisePow[x_, n_, a_] := x^n * Boole[x >= a];
+MacaulayPow[x_, n_, a_] := Piecewise[{{(x - a)^n, x >= a}, {0, True}}];
+MacaulayPowStrict[x_, n_, a_] := Piecewise[{{(x - a)^n, x > a}, {0, True}}];
+Iverson[s_] := Boole[Mod[s, 2] == 0];
+Pow[x_, s_] := x^Iverson[s] * x^(2 Floor[(s - 1) / 2] + 1);
 
-TriangleQ[n_]:= Column[Table[U[s, k], {s, 0, n}, {k, 0, s}], Left];
+PiecewisePowDiscConv[x_, n_, a_] := Sum[PiecewisePow[k, n, a] * PiecewisePow[x - k, n, a], {k, -Infinity, +Infinity}];
+MacaulayDiscConv[x_, n_, a_] := Sum[MacaulayPow[k, n, a] * MacaulayPow[x - k, n, a], {k, -Infinity, +Infinity}];
+MacaulayDiscConvStrict[x_, n_, a_] := Sum[MacaulayPowStrict[k, n, a] * MacaulayPowStrict[x - k, n, a], {k, -Infinity, +Infinity}];
+ContinuousConvf[x_, n_, a_] := Integrate[PiecewisePow[k, n, a] * PiecewisePow[x - k, n, a], {k, -Infinity, +Infinity}];
 
-TriangleCoeffA[j_]:= Column[Table[ CoeffA[n, k], {n, 0, j}, {k, 0, n}], Left];
+P2[m_, n_, b_] := n^Iverson[m] * P[Floor[(m - 1) / 2], n, b];
+GeneralP[m_, n_, a_, b_] := Expand[Sum[L[m, n, k], {k, a, b - 1}]];
+BinPoly[t_, k_] := 1 / k! * Product[(t - w), {w, 0, k - 1}];
 
-ColumnTriangleA[j_, t_] := Table[CoeffA[n, j], {n, j, t}];
+(* Convolutional tables and data sets *)
 
-DiagonalTriangleA[r_, t_] := Table[CoeffA[j + r, j], {j, 0, t}];
+DiscConvTable[m_, r_] := Column[Table[PiecewisePowDiscConv[n - k, k, r], {n, 0, m}, {k, 0, n}], Left];
+MacaulayDiscConvTable[m_, a_] := Column[Table[MacaulayDiscConv[n - k, k, a], {n, 0, m}, {k, 0, n}], Left];
+MacaulayDiscConvTableStrict[m_, a_] := Column[Table[MacaulayDiscConvStrict[n - k, k, a], {n, 0, m}, {k, 0, n}], Left];
+MatrixPolynomialL[m_, M_, N_] := Column[Table[L[m, n, k], {n, -N, N}, {k, -M, M}], Left];
 
-CenteredColumnTriangleA[r_, t_] := Table[CoeffA[2 n + r, n], {n, 0, t}];
+(* For Unit tests *)
 
-TriangleL[m_, t_] := Column[Table[L[m, n, k], {n, 0, t}, {k, 0, n}], Center];
-
-GeneralizedTriangleL[m_, t_, radius_] := Column[Table[L[m, n, k], {n, 0, t}, {k, -radius , n+radius}], Left];
-
-RowGeneralizedTriangleL[m_, n_, radius_] := Table[L[m, n, s], {s, -radius, n+radius}];
-
-RowSumGeneralizedTriangleL[m_, n_, radius_]:= Sum[L[m, n, k], {k, -radius, n+radius}];
-
-RowTriangleL[m_, n_] := Table[L[m, n, k], {k, 0, n}];
-
-ColumnTriangleL[m_, k_, t_] := Table[L[m, n, k], {n, k, t+k}];
-
-ColumnSumTriangleL[m_, r_, s_]:= Table[Sum[L[m, k, r], {k, r, t}], {t, r, s+r}];
-
-ClosedFormColumnSumL[m_, k_, max_]:=Sum[L[m, s, k], {s, k, max}];
-
-CenteredColumnTriangleL[m_, r_, t_] := Table[L[m, 2 n + r, n], {n, 0, t}];
-
-OddPowerIdentity[n_, m_] := Sum[CoeffA[m,r]*Sum[k^r(n-k)^r, {k, 0, n}], {r, 0, m}];
-
-ClosedFormOddPowerIdentity[m_, n_, T_] := Expand[Sum[L[m, n, k], {k, 0, T}]];
-
-ClosedFormOddPowerIdentityByRadius[m_, T_, radius_] := Expand[Sum[L[m, T, k], {k, -radius, T+radius}]];
-
-ClosedFormOddPowerIdentityList[m_, n_, t_] := Column[Table[ClosedFormOddPowerIdentity[m, n, f], {f, 0, t}], Left];
-
-ClosedFormCoefficient[m_, l_, t_] := (-1)^m Sum[Sum[Binomial[j, t] CoeffA[m, j] k^(2 j - t) (-1)^j, {j, t, m}], {k, 0, l}];
-
-ClosedFormCoefficientList[m_, r_] := Column[Table[ClosedFormCoefficient[m, l, t], {l, 0, r}, {t, 0, m}], Left];
-
-ClosedFormCoefficientColumn[m_, t_, r_] := Table[ClosedFormCoefficient[m, l, t], {l, 0, r}];
-
-BinomialTriangle[s_, t_] := Column[Table[Binomial[n, k] * s^k, {n, 0, t}, {k, 0, n}], Center];
-
-PolnomialPValues[m_, size_] := Column[Table[P[m, t, b], {t, 0, size}, {b, 0, size}], Left];
-PolnomialPColumn[m_, b_, size_] := Table[P[m, t, b], {t, 0, size}];
-PolnomialPRow[m_, t_, size_] := Table[P[m, t, b], {b, 0, size}];
-
-Numerical[n_, k_] := 0;
-Numerical[n_, k_] := 1 /; k == 0 || k == n;
-Numerical[n_, k_] := Sum[n^s, {s, 0, n-1}] /; 0 < k< n;
-
-NumericalTriangle[n_, t_] := Column[Table[Numerical[n,k], {n, 0, t}, {k, 0, n}], Center];
-
-CoeffLamda[m_, r_, k_] := Sum[Binomial[j, r] * CoeffA[m,j] * (-1)^j / (2j - r + 1) * Binomial[2j - r + 1, k] * BernoulliB[2j - r + 1 - k], {j, r, m}];
-
-LamdaOddPowerIdentity[T_, s_] := Sum[Sum[(-1)^(2s-r) * CoeffLamda[s, r, k] * T^(k+r), {k, 0, 2s+1-r}], {r, 0, s}];
-
-LamdaOddPowerIdentityClosedForm[T_, l_, s_] := Sum[Sum[(-1)^(2s-r) * CoeffLamda[s, r, k] * T^r * l^k, {k, 1, 2s+1-r}], {r, 0, s}];
-
-ColumnSumClosedForm[lowlimit_, uplimit_, m_]:=Sum[L[m, uplimit, k], {k, lowlimit, uplimit}];
+ConvPowerIdentity[m_, x_] := Refine[Sum[CoeffA[m,r] * MacaulayDiscConv[x, r, 0], {r, 0, m}], Element[x, Integers], Assumptions -> x>0];
+ConvPowerIdentityStrict[m_, x_] := Refine[Sum[CoeffA[m,r] * MacaulayDiscConvStrict[x, r, 0], {r, 0, m}], Element[x, Integers], Assumptions -> x>0];
+ConvPowerIdentityParametric[m_, x_, a_] := Expand[Refine[Sum[CoeffA[m,r] * MacaulayDiscConv[x, r, a], {r, 0, m}], Element[x, Integers], Assumptions -> x>2*a]];
+ConvPowerIdentityStrictParametric[m_, x_, a_] := Expand[Refine[Sum[CoeffA[m,r] * MacaulayDiscConvStrict[x, r, a], {r, 0, m}], Element[x, Integers], Assumptions -> x>2*a]];
 
 End[ ]
 
